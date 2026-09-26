@@ -286,7 +286,8 @@
         }
         .executor-card:hover { border-color: rgba(37,99,235,0.5); transform: translateY(-1px); }
         .executor-info { display: flex; gap: 14px; min-width: 0; flex: 1; }
-        .executor-icon { width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0; background: var(--danger-soft); display: flex; align-items: center; justify-content: center; font-size: 19px; }
+        .executor-icon { width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0; background: var(--danger-soft); display: flex; align-items: center; justify-content: center; font-size: 19px; overflow: hidden; }
+        .executor-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .executor-info h3 { margin: 0 0 4px; font-size: 15.5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
         .executor-info p { margin: 0; font-size: 12.5px; color: var(--text-muted); max-width: 480px; }
         .verified-badge { display: inline-flex; align-items: center; gap: 3px; background: rgba(16,185,129,0.14); color: var(--success); font-size: 10.5px; font-weight: 800; padding: 2px 8px; border-radius: 999px; }
@@ -567,6 +568,10 @@
         <div class="form-group">
             <label for="executorUrl">Link (download / site oficial)</label>
             <input type="text" id="executorUrl" placeholder="https://...">
+        </div>
+        <div class="form-group">
+            <label for="executorImageUrl">Link da imagem/logo (opcional)</label>
+            <input type="text" id="executorImageUrl" placeholder="https://.../logo.png">
         </div>
         <div class="form-group">
             <label for="executorDesc">Descrição (opcional)</label>
@@ -1163,10 +1168,13 @@
 
         let html = '<div class="executor-list">';
         executorsData.forEach((ex, i) => {
+            const iconHtml = ex.image_url
+                ? `<img src="${escapeHtml(ex.image_url)}" alt="Logo ${escapeHtml(ex.name)}" loading="lazy" onerror="this.parentElement.innerHTML='&#x1F6E1;&#xFE0F;';">`
+                : '&#x1F6E1;&#xFE0F;';
             html += `
                 <div class="executor-card" style="animation-delay:${Math.min(i, 10) * 0.05}s">
                     <div class="executor-info">
-                        <div class="executor-icon">&#x1F6E1;&#xFE0F;</div>
+                        <div class="executor-icon">${iconHtml}</div>
                         <div style="min-width:0;">
                             <h3>${escapeHtml(ex.name)} <span class="verified-badge">&#x2713; OFICIAL</span></h3>
                             ${ex.description ? `<p>${escapeHtml(ex.description)}</p>` : ''}
@@ -1189,6 +1197,7 @@
 
         const nameInput = document.getElementById('executorName');
         const urlInput = document.getElementById('executorUrl');
+        const imageInput = document.getElementById('executorImageUrl');
         const descInput = document.getElementById('executorDesc');
 
         if (id) {
@@ -1199,6 +1208,7 @@
             document.getElementById('saveExecutorBtnLabel').textContent = 'Salvar Alterações';
             nameInput.value = ex.name;
             urlInput.value = ex.url;
+            imageInput.value = ex.image_url || '';
             descInput.value = ex.description || '';
         } else {
             editingExecutorId = null;
@@ -1206,6 +1216,7 @@
             document.getElementById('saveExecutorBtnLabel').textContent = 'Salvar Executor';
             nameInput.value = '';
             urlInput.value = '';
+            imageInput.value = '';
             descInput.value = '';
         }
         document.getElementById('executorModal').style.display = 'flex';
@@ -1222,9 +1233,11 @@
 
         const nameInput = document.getElementById('executorName');
         const urlInput = document.getElementById('executorUrl');
+        const imageInput = document.getElementById('executorImageUrl');
         const descInput = document.getElementById('executorDesc');
         const name = nameInput.value.trim();
         const url = urlInput.value.trim();
+        const image_url = imageInput.value.trim();
         const description = descInput.value.trim();
 
         nameInput.classList.remove('input-error');
@@ -1242,9 +1255,9 @@
         try {
             let error;
             if (editingExecutorId) {
-                ({ error } = await sb.from('executors').update({ name, url, description }).eq('id', editingExecutorId));
+                ({ error } = await sb.from('executors').update({ name, url, image_url, description }).eq('id', editingExecutorId));
             } else {
-                ({ error } = await sb.from('executors').insert([{ name, url, description }]));
+                ({ error } = await sb.from('executors').insert([{ name, url, image_url, description }]));
             }
 
             if (error) {
