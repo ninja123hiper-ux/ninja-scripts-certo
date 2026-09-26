@@ -454,9 +454,9 @@
                     <span class="user-chip-email" id="userEmailDisplay"></span>
                 </button>
                 <div class="user-dropdown" id="userDropdown" role="menu">
-                    <button class="user-dropdown-item" role="menuitem" onclick="openProfileModal()">👤 Meu Perfil</button>
+                    <button class="user-dropdown-item" role="menuitem" onclick="openProfileModal()">&#x1F464; Meu Perfil</button>
                     <div class="user-dropdown-divider"></div>
-                    <button class="user-dropdown-item danger" role="menuitem" onclick="logout()">🚪 Sair</button>
+                    <button class="user-dropdown-item danger" role="menuitem" onclick="logout()">&#x1F6AA; Sair</button>
                 </div>
             </div>
         </div>
@@ -464,10 +464,10 @@
 
     <nav class="main-nav" role="tablist" aria-label="Navegação principal">
         <button class="main-nav-btn active" id="navScriptsBtn" role="tab" aria-selected="true" aria-controls="scriptsSection" onclick="switchSection('scripts')" onkeydown="navKeydown(event,'scripts')">
-            <span class="main-nav-icon">📜</span> Scripts
+            <span class="main-nav-icon">&#x1F4DC;</span> Scripts
         </button>
         <button class="main-nav-btn" id="navExecutorsBtn" role="tab" aria-selected="false" aria-controls="executorsSection" onclick="switchSection('executors')" onkeydown="navKeydown(event,'executors')">
-            <span class="main-nav-icon">🛡️</span> Executores Oficiais
+            <span class="main-nav-icon">&#x1F6E1;&#xFE0F;</span> Executores Oficiais
         </button>
     </nav>
 
@@ -476,7 +476,7 @@
         <div class="search-wrap">
             <label for="searchInput" class="sr-only" style="position:absolute; left:-9999px;">Buscar scripts por nome ou jogo</label>
             <input type="text" class="search-bar" placeholder="Buscar por nome ou jogo..." id="searchInput" oninput="onSearchInput()">
-            <button class="search-clear" id="searchClearBtn" onclick="clearSearch()" aria-label="Limpar busca" type="button">✕</button>
+            <button class="search-clear" id="searchClearBtn" onclick="clearSearch()" aria-label="Limpar busca" type="button">&#x2715;</button>
         </div>
 
         <div class="tabs" id="categoryTabs" role="group" aria-label="Filtrar por categoria"></div>
@@ -491,7 +491,7 @@
     <div id="executorsSection" role="tabpanel" aria-labelledby="navExecutorsBtn" style="display:none;">
         <div class="section-header">
             <div>
-                <h2>🛡️ Executores Oficiais</h2>
+                <h2>&#x1F6E1;&#xFE0F; Executores Oficiais</h2>
                 <p class="section-subtitle">Links reunidos e mantidos pela administração do site.</p>
             </div>
             <button class="btn-primary" id="addExecutorBtn" onclick="openExecutorModal()" style="display:none; background-color: var(--danger); box-shadow: 0 4px 12px rgba(239,68,68,0.35);">+ Adicionar Executor</button>
@@ -502,7 +502,7 @@
     </div>
 
     <div class="footer">
-        <div class="footer-brand">🥷 Ninja Scripts</div>
+        <div class="footer-brand">&#x1F977; Ninja Scripts</div>
         <div class="footer-version">v2.0 · Feito para a comunidade Roblox · © <span id="footerYear"></span></div>
     </div>
 </div>
@@ -582,7 +582,7 @@
 <!-- Modal de Perfil -->
 <div class="modal-overlay" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle" onmousedown="handleBackdropClick(event,'profileModal')">
     <div class="modal" onmousedown="event.stopPropagation()">
-        <h2 id="profileModalTitle">👤 Meu Perfil</h2>
+        <h2 id="profileModalTitle">&#x1F464; Meu Perfil</h2>
         <p style="color:var(--text-muted); font-size:13.5px; margin-top:-14px;" id="profileEmailLine"></p>
         <div class="profile-stats">
             <div class="profile-stat">
@@ -623,20 +623,20 @@
     // Para adicionar um jogo novo: só acrescente um item aqui.
     // Ele aparece automaticamente nas abas, no seletor do modal e no ícone do card.
     const GAMES = [
-        { id: 'Blox Fruits',        icon: '🍈' },
-        { id: 'Roube um Ovo',       icon: '🥚' },
-        { id: 'Adopt Me!',          icon: '🐾' },
-        { id: 'Brookhaven 🏡RP',    icon: '🏡' },
-        { id: 'Tower of Hell',      icon: '🗼' },
-        { id: 'Murder Mystery 2',   icon: '🔪' },
-        { id: 'Piggy',              icon: '🐷' },
-        { id: 'Arsenal',            icon: '🔫' },
-        { id: 'Jailbreak',          icon: '🚔' },
-        { id: 'Outros',             icon: '🎮' }
+        { id: 'Blox Fruits',        icon: '&#x1F348;' },
+        { id: 'Roube um Ovo',       icon: '&#x1F95A;' },
+        { id: 'Adopt Me!',          icon: '&#x1F43E;' },
+        { id: 'Brookhaven &#x1F3E1;RP',    icon: '&#x1F3E1;' },
+        { id: 'Tower of Hell',      icon: '&#x1F5FC;' },
+        { id: 'Murder Mystery 2',   icon: '&#x1F52A;' },
+        { id: 'Piggy',              icon: '&#x1F437;' },
+        { id: 'Arsenal',            icon: '&#x1F52B;' },
+        { id: 'Jailbreak',          icon: '&#x1F694;' },
+        { id: 'Outros',             icon: '&#x1F3AE;' }
     ];
     function gameIcon(game) {
         const g = GAMES.find(x => x.id === game);
-        return g ? g.icon : '🎮';
+        return g ? g.icon : '&#x1F3AE;';
     }
 
     /* ---------------------- ESTADO GLOBAL ---------------------- */
@@ -652,7 +652,7 @@
     let searchDebounceTimer = null;
 
     /* ===================== TOASTS ===================== */
-    const TOAST_ICONS = { success: '✓', error: '✕', warning: '⚠', info: 'ℹ' };
+    const TOAST_ICONS = { success: '&#x2713;', error: '&#x2715;', warning: '&#x26A0;', info: '&#x2139;' };
     function showToast(message, type) {
         type = type || 'info';
         const box = document.getElementById('toastBox');
@@ -769,7 +769,7 @@
             document.getElementById('guestActions').style.display = 'none';
             document.getElementById('userActions').style.display = 'flex';
             const email = currentUser.email || '';
-            document.getElementById('userEmailDisplay').innerHTML = escapeHtml(email) + (isAdmin ? ' <span class="admin-badge">👑 ADMIN</span>' : '');
+            document.getElementById('userEmailDisplay').innerHTML = escapeHtml(email) + (isAdmin ? ' <span class="admin-badge">&#x1F451; ADMIN</span>' : '');
             document.getElementById('userAvatar').textContent = email.charAt(0).toUpperCase() || '?';
             document.getElementById('postScriptBtn').style.display = 'inline-block';
         } else {
@@ -907,7 +907,7 @@
 
     function renderCategoryTabs() {
         const box = document.getElementById('categoryTabs');
-        const all = [{ id: 'Todos', icon: '📂' }, ...GAMES];
+        const all = [{ id: 'Todos', icon: '&#x1F4C2;' }, ...GAMES];
         box.innerHTML = all.map(g =>
             `<button type="button" class="tab ${g.id === currentCategory ? 'active' : ''}" data-cat="${escapeHtml(g.id)}" onclick="setCategory('${g.id.replace(/'/g, "\\'")}')">${g.icon} ${escapeHtml(g.id)}</button>`
         ).join('');
@@ -924,7 +924,7 @@
 
         if (error) {
             console.error('Erro ao buscar scripts:', error);
-            document.getElementById('contentArea').innerHTML = `<div class="empty-state"><div class="empty-icon">📡</div>Não foi possível carregar os scripts. Tente novamente.</div>`;
+            document.getElementById('contentArea').innerHTML = `<div class="empty-state"><div class="empty-icon">&#x1F4E1;</div>Não foi possível carregar os scripts. Tente novamente.</div>`;
             return;
         }
 
@@ -1056,7 +1056,7 @@
                 document.body.removeChild(ta);
             }
             markCopyFeedback(btn, true);
-            showToast('✓ Script copiado!', 'success');
+            showToast('&#x2713; Script copiado!', 'success');
             incrementCopyCount(scriptId);
         } catch (e) {
             markCopyFeedback(btn, false);
@@ -1066,7 +1066,7 @@
 
     function markCopyFeedback(btn, ok) {
         const original = btn.innerHTML;
-        btn.innerHTML = ok ? '✓ Copiado!' : '✕ Falhou';
+        btn.innerHTML = ok ? '&#x2713; Copiado!' : '&#x2715; Falhou';
         btn.style.borderColor = ok ? 'var(--success)' : 'var(--danger)';
         btn.style.color = ok ? 'var(--success)' : 'var(--danger)';
         setTimeout(() => {
@@ -1085,7 +1085,7 @@
                 const s = scriptsData.find(x => x.id === scriptId);
                 if (s) s.copy_count = (s.copy_count || 0) + 1;
                 const badge = document.querySelector(`[data-copy-count="${scriptId}"]`);
-                if (badge && s) badge.textContent = `🔥 ${s.copy_count} cópias`;
+                if (badge && s) badge.innerHTML = `&#x1F525; ${s.copy_count} cópias`;
             }
         } catch (e) { /* contador é um extra visual — falha aqui não deve travar a cópia */ }
     }
@@ -1102,9 +1102,9 @@
 
         if (filtered.length === 0) {
             if (scriptsData.length === 0) {
-                area.innerHTML = `<div class="empty-state"><div class="empty-icon">📂</div><h3 style="margin-bottom:8px;">Nenhum script cadastrado ainda</h3><p>Faça login e seja o primeiro a postar!</p></div>`;
+                area.innerHTML = `<div class="empty-state"><div class="empty-icon">&#x1F4C2;</div><h3 style="margin-bottom:8px;">Nenhum script cadastrado ainda</h3><p>Faça login e seja o primeiro a postar!</p></div>`;
             } else {
-                area.innerHTML = `<div class="empty-state"><div class="empty-icon">🔍</div><h3 style="margin-bottom:8px;">Nenhum resultado encontrado</h3><p>Tente outro termo de busca ou categoria.</p></div>`;
+                area.innerHTML = `<div class="empty-state"><div class="empty-icon">&#x1F50D;</div><h3 style="margin-bottom:8px;">Nenhum resultado encontrado</h3><p>Tente outro termo de busca ou categoria.</p></div>`;
             }
             return;
         }
@@ -1124,16 +1124,16 @@
                             <h3>${escapeHtml(s.name)}</h3>
                             <div class="script-meta-row">
                                 <span class="tag"><span class="tag-icon">${gameIcon(s.game)}</span>${escapeHtml(s.game)}</span>
-                                <span class="meta-chip">✍️ ${escapeHtml(author)}</span>
-                                ${s.created_at ? `<span class="meta-chip">🗓️ ${formatDate(s.created_at)}</span>` : ''}
-                                ${copyCount !== null ? `<span class="meta-chip" data-copy-count="${s.id}">🔥 ${copyCount} cópias</span>` : ''}
+                                <span class="meta-chip">&#x270D;&#xFE0F; ${escapeHtml(author)}</span>
+                                ${s.created_at ? `<span class="meta-chip">&#x1F5D3;&#xFE0F; ${formatDate(s.created_at)}</span>` : ''}
+                                ${copyCount !== null ? `<span class="meta-chip" data-copy-count="${s.id}">&#x1F525; ${copyCount} cópias</span>` : ''}
                             </div>
                         </div>
                     </div>
                     <div class="action-btns">
-                        <button class="btn-outline btn-copy" onclick="copyScript(this, ${s.id})" type="button">📋 Copiar Script</button>
-                        ${showEdit ? `<button class="btn-outline" onclick="openScriptModal(${s.id})" type="button">✏️ Editar</button>` : ''}
-                        ${showDelete ? `<button class="btn-delete" onclick="deleteScript(${s.id})" type="button">🗑️ Apagar</button>` : ''}
+                        <button class="btn-outline btn-copy" onclick="copyScript(this, ${s.id})" type="button">&#x1F4CB; Copiar Script</button>
+                        ${showEdit ? `<button class="btn-outline" onclick="openScriptModal(${s.id})" type="button">&#x270F;&#xFE0F; Editar</button>` : ''}
+                        ${showDelete ? `<button class="btn-delete" onclick="deleteScript(${s.id})" type="button">&#x1F5D1;&#xFE0F; Apagar</button>` : ''}
                     </div>
                 </div>
             `;
@@ -1157,7 +1157,7 @@
     function renderExecutors() {
         const area = document.getElementById('executorsArea');
         if (executorsData.length === 0) {
-            area.innerHTML = `<div class="empty-state" style="padding:60px 20px;"><div class="empty-icon">🛡️</div>Nenhum executor cadastrado ainda.</div>`;
+            area.innerHTML = `<div class="empty-state" style="padding:60px 20px;"><div class="empty-icon">&#x1F6E1;&#xFE0F;</div>Nenhum executor cadastrado ainda.</div>`;
             return;
         }
 
@@ -1166,16 +1166,16 @@
             html += `
                 <div class="executor-card" style="animation-delay:${Math.min(i, 10) * 0.05}s">
                     <div class="executor-info">
-                        <div class="executor-icon">🛡️</div>
+                        <div class="executor-icon">&#x1F6E1;&#xFE0F;</div>
                         <div style="min-width:0;">
-                            <h3>${escapeHtml(ex.name)} <span class="verified-badge">✓ OFICIAL</span></h3>
+                            <h3>${escapeHtml(ex.name)} <span class="verified-badge">&#x2713; OFICIAL</span></h3>
                             ${ex.description ? `<p>${escapeHtml(ex.description)}</p>` : ''}
                         </div>
                     </div>
                     <div class="executor-actions">
-                        <a class="btn-outline" href="${escapeHtml(ex.url)}" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;">🔗 Abrir</a>
-                        ${isAdmin ? `<button class="btn-outline" onclick="openExecutorModal(${ex.id})" type="button">✏️ Editar</button>` : ''}
-                        ${isAdmin ? `<button class="btn-delete" onclick="deleteExecutor(${ex.id})" type="button">🗑️ Apagar</button>` : ''}
+                        <a class="btn-outline" href="${escapeHtml(ex.url)}" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;">&#x1F517; Abrir</a>
+                        ${isAdmin ? `<button class="btn-outline" onclick="openExecutorModal(${ex.id})" type="button">&#x270F;&#xFE0F; Editar</button>` : ''}
+                        ${isAdmin ? `<button class="btn-delete" onclick="deleteExecutor(${ex.id})" type="button">&#x1F5D1;&#xFE0F; Apagar</button>` : ''}
                     </div>
                 </div>
             `;
