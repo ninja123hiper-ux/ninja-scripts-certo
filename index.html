@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ninja Scripts — Scripts e Executores para Roblox</title>
-    <meta name="description" content="Biblioteca colaborativa de scripts para jogos do Roblox (Blox Fruits, Adopt Me!, Brookhaven e mais) e lista de executores oficiais.">
+    <meta name="description"
+        content="Biblioteca colaborativa de scripts para jogos do Roblox (Blox Fruits, Adopt Me!, Brookhaven e mais) e lista de executores oficiais.">
     <meta property="og:title" content="Ninja Scripts">
-    <meta property="og:description" content="Biblioteca colaborativa de scripts para jogos do Roblox e executores oficiais.">
+    <meta property="og:description"
+        content="Biblioteca colaborativa de scripts para jogos do Roblox e executores oficiais.">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#0a0e14">
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232563EB'/><stop offset='100%25' stop-color='%23EF4444'/></linearGradient></defs><rect width='24' height='24' rx='6' fill='%230a0e14'/><path d='M14.5 17.5L3 6V3h3l11.5 11.5' stroke='url(%23g)' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M13 19l6-6' stroke='url(%23g)' stroke-width='2' fill='none' stroke-linecap='round'/><path d='M16 16l4 4' stroke='url(%23g)' stroke-width='2' fill='none' stroke-linecap='round'/><path d='M19 21l2-2' stroke='url(%23g)' stroke-width='2' fill='none' stroke-linecap='round'/><path d='M11 9L8 12' stroke='url(%23g)' stroke-width='2' fill='none' stroke-linecap='round'/></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%232563EB'/><stop offset='100%25' stop-color='%23EF4444'/></linearGradient></defs><rect width='24' height='24' rx='6' fill='%230a0e14'/><path d='M14.5 17.5L3 6V3h3l11.5 11.5' stroke='url(%23g)' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M13 19l6-6' stroke='url(%23g)' stroke-width='2' fill='none' stroke-linecap='round'/><path d='M16 16l4 4' stroke='url(%23g)' stroke-width='2' fill='none' stroke-linecap='round'/><path d='M19 21l2-2' stroke='url(%23g)' stroke-width='2' fill='none' stroke-linecap='round'/><path d='M11 9L8 12' stroke='url(%23g)' stroke-width='2' fill='none' stroke-linecap='round'/></svg>">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -28,33 +32,38 @@
             --accent: #2563eb;
             --accent-2: #1e3a8a;
             --accent-hover: #1d4ed8;
-            --accent-soft: rgba(37,99,235,0.12);
+            --accent-soft: rgba(37, 99, 235, 0.12);
             --border: #1f2739;
             --border-strong: #2c3650;
             --danger: #ef4444;
             --danger-hover: #dc2626;
-            --danger-soft: rgba(239,68,68,0.12);
+            --danger-soft: rgba(239, 68, 68, 0.12);
             --success: #10b981;
             --warning: #f59e0b;
             --info: #3b82f6;
             --radius-sm: 8px;
             --radius-md: 14px;
             --radius-lg: 20px;
-            --ease: cubic-bezier(.22,.61,.36,1);
+            --ease: cubic-bezier(.22, .61, .36, 1);
         }
 
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             background-color: var(--bg-color);
             background-image:
-                radial-gradient(circle at 12% 8%, rgba(37,99,235,0.16), transparent 42%),
-                radial-gradient(circle at 88% 18%, rgba(239,68,68,0.13), transparent 40%),
-                radial-gradient(circle at 10% 85%, rgba(239,68,68,0.10), transparent 38%),
-                radial-gradient(circle at 92% 90%, rgba(37,99,235,0.14), transparent 42%),
-                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+                radial-gradient(circle at 12% 8%, rgba(37, 99, 235, 0.16), transparent 42%),
+                radial-gradient(circle at 88% 18%, rgba(239, 68, 68, 0.13), transparent 40%),
+                radial-gradient(circle at 10% 85%, rgba(239, 68, 68, 0.10), transparent 38%),
+                radial-gradient(circle at 92% 90%, rgba(37, 99, 235, 0.14), transparent 42%),
+                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
             background-size: auto, auto, auto, auto, 42px 42px, 42px 42px;
             background-attachment: fixed;
             color: var(--text-main);
@@ -66,10 +75,19 @@
             justify-content: center;
         }
 
-        .container { max-width: 960px; width: 100%; }
-        #scriptsSection, #executorsSection { animation: fadeInUp 0.35s var(--ease) both; }
+        .container {
+            max-width: 960px;
+            width: 100%;
+        }
 
-        a { color: inherit; }
+        #scriptsSection,
+        #executorsSection {
+            animation: fadeInUp 0.35s var(--ease) both;
+        }
+
+        a {
+            color: inherit;
+        }
 
         /* ============== HEADER ============== */
         .header {
@@ -81,46 +99,125 @@
             align-items: center;
             border: 1px solid var(--border);
             margin-bottom: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             gap: 16px;
             flex-wrap: wrap;
         }
 
-        .logo-area { display: flex; align-items: center; gap: 14px; cursor: pointer; }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            cursor: pointer;
+        }
 
         .logo-svg {
             position: relative;
             background: linear-gradient(135deg, #2563eb, #ef4444);
             border-radius: 12px;
-            width: 46px; height: 46px;
-            display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 0 18px rgba(37, 99, 235, 0.5), inset 0 0 12px rgba(255,255,255,0.15);
+            width: 46px;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 18px rgba(37, 99, 235, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.15);
             flex-shrink: 0;
             transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
         }
-        .logo-area:hover .logo-svg { transform: rotate(-8deg) scale(1.06); box-shadow: 0 0 26px rgba(239, 68, 68, 0.6), inset 0 0 12px rgba(255,255,255,0.2); }
-        .logo-ring { position: absolute; inset: -4px; border-radius: 14px; border: 1.5px solid rgba(239, 68, 68, 0.55); opacity: 0; transition: opacity 0.3s ease; }
-        .logo-area:hover .logo-ring { opacity: 1; animation: ringPulse 1.6s ease-out infinite; }
-        @keyframes ringPulse { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.35); opacity: 0; } }
+
+        .logo-area:hover .logo-svg {
+            transform: rotate(-8deg) scale(1.06);
+            box-shadow: 0 0 26px rgba(239, 68, 68, 0.6), inset 0 0 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .logo-ring {
+            position: absolute;
+            inset: -4px;
+            border-radius: 14px;
+            border: 1.5px solid rgba(239, 68, 68, 0.55);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-area:hover .logo-ring {
+            opacity: 1;
+            animation: ringPulse 1.6s ease-out infinite;
+        }
+
+        @keyframes ringPulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: scale(1.35);
+                opacity: 0;
+            }
+        }
 
         .title h1 {
-            margin: 0; font-size: 21px; font-weight: 800; letter-spacing: -0.5px;
+            margin: 0;
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
             background: linear-gradient(to right, #fff, #a1a1aa);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .sync-status { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--success); font-weight: 600; margin-top: 3px; }
-        .dot { width: 7px; height: 7px; background-color: var(--success); border-radius: 50%; box-shadow: 0 0 8px var(--success); animation: pulse 2s infinite; flex-shrink: 0; }
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .header-actions { display: flex; gap: 10px; align-items: center; }
-        .user-menu { position: relative; display: none; }
+        .sync-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--success);
+            font-weight: 600;
+            margin-top: 3px;
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            background-color: var(--success);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--success);
+            animation: pulse 2s infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .user-menu {
+            position: relative;
+            display: none;
+        }
 
         .user-chip {
-            display: flex; align-items: center; gap: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
             background: var(--panel-raised);
             border: 1px solid var(--border);
             border-radius: 999px;
@@ -128,268 +225,938 @@
             cursor: pointer;
             transition: border-color .2s ease, background .2s ease;
         }
-        .user-chip:hover { border-color: var(--border-strong); background: var(--panel-hover); }
-        .user-avatar {
-            width: 30px; height: 30px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent), var(--danger));
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 800; font-size: 13px; color: white; flex-shrink: 0;
+
+        .user-chip:hover {
+            border-color: var(--border-strong);
+            background: var(--panel-hover);
         }
-        .user-chip-email { font-size: 13px; font-weight: 600; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+        .user-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--danger));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 13px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .user-chip-email {
+            font-size: 13px;
+            font-weight: 600;
+            max-width: 140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
         .admin-badge {
-            display: inline-flex; align-items: center; gap: 3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
             background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: #1a1200; font-size: 10px; font-weight: 800;
-            padding: 2px 7px; border-radius: 999px; margin-left: 2px;
+            color: #1a1200;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 999px;
+            margin-left: 2px;
         }
 
         .user-dropdown {
-            position: absolute; top: calc(100% + 8px); right: 0;
-            background: var(--panel-bg); border: 1px solid var(--border);
-            border-radius: var(--radius-md); box-shadow: 0 16px 40px rgba(0,0,0,0.55);
-            min-width: 220px; padding: 8px; z-index: 500;
-            opacity: 0; transform: translateY(-6px) scale(0.97); pointer-events: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+            min-width: 220px;
+            padding: 8px;
+            z-index: 500;
+            opacity: 0;
+            transform: translateY(-6px) scale(0.97);
+            pointer-events: none;
             transition: opacity .18s var(--ease), transform .18s var(--ease);
         }
-        .user-dropdown.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
-        .user-dropdown-item {
-            display: flex; align-items: center; gap: 10px; width: 100%;
-            background: none; border: none; color: var(--text-main);
-            padding: 10px 12px; border-radius: var(--radius-sm); cursor: pointer;
-            font-size: 13.5px; font-weight: 600; text-align: left; font-family: inherit;
+
+        .user-dropdown.open {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
         }
-        .user-dropdown-item:hover { background: var(--panel-hover); }
-        .user-dropdown-item.danger { color: var(--danger); }
-        .user-dropdown-divider { height: 1px; background: var(--border); margin: 6px 4px; }
+
+        .user-dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 13.5px;
+            font-weight: 600;
+            text-align: left;
+            font-family: inherit;
+        }
+
+        .user-dropdown-item:hover {
+            background: var(--panel-hover);
+        }
+
+        .user-dropdown-item.danger {
+            color: var(--danger);
+        }
+
+        .user-dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 6px 4px;
+        }
 
         /* ============== BUTTONS ============== */
         .btn-primary {
-            background-color: var(--accent); color: white; border: none;
-            padding: 10px 18px; border-radius: var(--radius-sm); cursor: pointer;
-            font-weight: 600; font-size: 14px; transition: all 0.2s var(--ease);
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s var(--ease);
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
             font-family: inherit;
         }
-        .btn-primary:hover { background-color: var(--accent-hover); transform: translateY(-1px); }
-        .btn-primary:disabled { opacity: .65; cursor: not-allowed; transform: none; }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-primary:disabled {
+            opacity: .65;
+            cursor: not-allowed;
+            transform: none;
+        }
 
         .btn-outline {
-            background-color: transparent; color: var(--text-main); border: 1px solid var(--border);
-            padding: 10px 18px; border-radius: var(--radius-sm); cursor: pointer;
-            font-weight: 600; font-size: 14px; transition: 0.2s var(--ease); font-family: inherit;
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 10px 18px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.2s var(--ease);
+            font-family: inherit;
         }
-        .btn-outline:hover { background-color: var(--panel-hover); border-color: var(--border-strong); }
+
+        .btn-outline:hover {
+            background-color: var(--panel-hover);
+            border-color: var(--border-strong);
+        }
 
         .btn-delete {
-            background-color: transparent; color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3);
-            padding: 10px 16px; border-radius: var(--radius-sm); cursor: pointer;
-            font-weight: 600; transition: 0.2s var(--ease); font-family: inherit;
+            background-color: transparent;
+            color: var(--danger);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s var(--ease);
+            font-family: inherit;
         }
-        .btn-delete:hover { background-color: var(--danger-soft); border-color: var(--danger); }
 
-        .btn-link { background: none; border: none; color: var(--accent); font-weight: 600; font-size: 13px; cursor: pointer; padding: 0; font-family: inherit; }
-        .btn-link:hover { text-decoration: underline; }
+        .btn-delete:hover {
+            background-color: var(--danger-soft);
+            border-color: var(--danger);
+        }
+
+        .btn-link {
+            background: none;
+            border: none;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            padding: 0;
+            font-family: inherit;
+        }
+
+        .btn-link:hover {
+            text-decoration: underline;
+        }
 
         /* ============== NAV PRINCIPAL ============== */
-        .main-nav { display: flex; gap: 10px; margin-bottom: 22px; background: var(--panel-bg); border: 1px solid var(--border); border-radius: 14px; padding: 6px; }
-        .main-nav-btn {
-            flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
-            padding: 12px 16px; background: transparent; border: none; border-radius: 10px;
-            color: var(--text-muted); font-weight: 700; font-size: 14.5px; cursor: pointer;
-            transition: all 0.2s var(--ease); font-family: inherit;
+        .main-nav {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 22px;
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 6px;
         }
-        .main-nav-btn:hover { color: var(--text-main); background: var(--panel-hover); }
-        .main-nav-btn.active { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; box-shadow: 0 4px 14px rgba(37,99,235,0.35); }
-        .main-nav-icon { font-size: 16px; }
 
-        .section-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
-        .section-header h2 { margin: 0 0 4px; font-size: 19px; }
-        .section-subtitle { margin: 0; font-size: 13px; color: var(--text-muted); }
+        .main-nav-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: transparent;
+            border: none;
+            border-radius: 10px;
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 14.5px;
+            cursor: pointer;
+            transition: all 0.2s var(--ease);
+            font-family: inherit;
+        }
+
+        .main-nav-btn:hover {
+            color: var(--text-main);
+            background: var(--panel-hover);
+        }
+
+        .main-nav-btn.active {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: white;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        }
+
+        .main-nav-icon {
+            font-size: 16px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .section-header h2 {
+            margin: 0 0 4px;
+            font-size: 19px;
+        }
+
+        .section-subtitle {
+            margin: 0;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
 
         /* ============== BUSCA ============== */
-        .search-wrap { position: relative; margin-bottom: 18px; }
+        .search-wrap {
+            position: relative;
+            margin-bottom: 18px;
+        }
+
         .search-bar {
-            width: 100%; padding: 14px 42px 14px 20px; background-color: var(--panel-bg);
-            border: 1px solid var(--border); border-radius: 12px; color: white; font-size: 15px;
-            font-family: inherit; transition: border-color 0.2s var(--ease);
+            width: 100%;
+            padding: 14px 42px 14px 20px;
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: white;
+            font-size: 15px;
+            font-family: inherit;
+            transition: border-color 0.2s var(--ease);
         }
-        .search-bar:focus { outline: none; border-color: var(--accent); }
+
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
         .search-clear {
-            position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
-            width: 28px; height: 28px; border-radius: 50%; border: none; background: var(--panel-hover);
-            color: var(--text-muted); cursor: pointer; display: none; align-items: center; justify-content: center;
-            font-size: 15px; line-height: 1;
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: none;
+            background: var(--panel-hover);
+            color: var(--text-muted);
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            line-height: 1;
         }
-        .search-clear:hover { color: white; background: var(--border-strong); }
+
+        .search-clear:hover {
+            color: white;
+            background: var(--border-strong);
+        }
 
         /* ============== CATEGORIAS ============== */
-        .tabs { display: flex; gap: 10px; margin-bottom: 22px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: thin; }
-        .tabs::-webkit-scrollbar { height: 6px; }
-        .tabs::-webkit-scrollbar-track { background: var(--bg-color); border-radius: 4px; }
-        .tabs::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
-        .tab {
-            padding: 8px 16px; background-color: var(--panel-bg); border: 1px solid var(--border);
-            border-radius: 20px; color: var(--text-muted); cursor: pointer; font-size: 14px; font-weight: 600;
-            white-space: nowrap; transition: 0.2s var(--ease); font-family: inherit; flex-shrink: 0;
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 22px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
         }
-        .tab.active { background-color: var(--accent); color: white; border-color: var(--accent); box-shadow: 0 0 10px rgba(37, 99, 235, 0.35); }
-        .tab:hover:not(.active) { background-color: var(--panel-hover); color: white; }
+
+        .tabs::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .tabs::-webkit-scrollbar-track {
+            background: var(--bg-color);
+            border-radius: 4px;
+        }
+
+        .tabs::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        .tab {
+            padding: 8px 16px;
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: 0.2s var(--ease);
+            font-family: inherit;
+            flex-shrink: 0;
+        }
+
+        .tab.active {
+            background-color: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.35);
+        }
+
+        .tab:hover:not(.active) {
+            background-color: var(--panel-hover);
+            color: white;
+        }
 
         /* ============== CARDS DE SCRIPT ============== */
-        .script-list { display: flex; flex-direction: column; gap: 14px; }
-        .script-card {
-            background-color: var(--panel-bg); border: 1px solid var(--border); border-radius: 16px;
-            padding: 18px 20px; display: flex; justify-content: space-between; align-items: center;
-            transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), border-color .2s var(--ease);
-            gap: 16px; flex-wrap: wrap;
+        .script-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
         }
-        .script-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); border-color: var(--border-strong); }
 
-        .script-info { display: flex; gap: 14px; min-width: 0; flex: 1; }
-        .script-icon {
-            width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0;
-            background: var(--accent-soft); display: flex; align-items: center; justify-content: center; font-size: 19px;
+        .script-card {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), border-color .2s var(--ease);
+            gap: 16px;
+            flex-wrap: wrap;
         }
-        .script-info h3 { margin: 0 0 6px 0; font-size: 17px; font-weight: 700; overflow-wrap: anywhere; }
-        .script-meta-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+        .script-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border-color: var(--border-strong);
+        }
+
+        .script-info {
+            display: flex;
+            gap: 14px;
+            min-width: 0;
+            flex: 1;
+        }
+
+        .script-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            flex-shrink: 0;
+            background: var(--accent-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+        }
+
+        .script-info h3 {
+            margin: 0 0 6px 0;
+            font-size: 17px;
+            font-weight: 700;
+            overflow-wrap: anywhere;
+        }
+
+        .script-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
 
         .tag {
-            display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 3px;
-            background: #171d2b; color: #d4d4d8; border: 1px solid var(--border);
-            border-radius: 20px; font-size: 12px; font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 10px 3px 3px;
+            background: #171d2b;
+            color: #d4d4d8;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
         }
+
         .tag-icon {
-            display: inline-flex; align-items: center; justify-content: center; width: 19px; height: 19px;
-            border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--danger)); font-size: 11px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--danger));
+            font-size: 11px;
         }
-        .meta-chip { font-size: 11.5px; color: var(--text-faint); display: inline-flex; align-items: center; gap: 4px; }
 
-        .action-btns { display: flex; gap: 8px; flex-shrink: 0; }
+        .meta-chip {
+            font-size: 11.5px;
+            color: var(--text-faint);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
         .btn-copy {
-            display: inline-flex; align-items: center; gap: 7px;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
         }
 
-        .empty-state { text-align: center; padding: 70px 20px; color: var(--text-muted); background: var(--panel-bg); border-radius: 16px; border: 1px dashed var(--border); }
-        .empty-state .empty-icon { font-size: 34px; margin-bottom: 10px; }
+        .empty-state {
+            text-align: center;
+            padding: 70px 20px;
+            color: var(--text-muted);
+            background: var(--panel-bg);
+            border-radius: 16px;
+            border: 1px dashed var(--border);
+        }
+
+        .empty-state .empty-icon {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
 
         /* ============== SKELETON LOADING ============== */
-        .skeleton-card { background: var(--panel-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; margin-bottom: 14px; display: flex; gap: 14px; align-items: center; }
-        .skeleton-box { border-radius: 10px; background: linear-gradient(90deg, var(--panel-raised) 25%, var(--panel-hover) 37%, var(--panel-raised) 63%); background-size: 400% 100%; animation: shimmer 1.3s ease infinite; }
-        @keyframes shimmer { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+        .skeleton-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin-bottom: 14px;
+            display: flex;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .skeleton-box {
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--panel-raised) 25%, var(--panel-hover) 37%, var(--panel-raised) 63%);
+            background-size: 400% 100%;
+            animation: shimmer 1.3s ease infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 100% 0;
+            }
+
+            100% {
+                background-position: -100% 0;
+            }
+        }
 
         /* ============== EXECUTORES ============== */
-        .executor-list { display: flex; flex-direction: column; gap: 12px; }
-        .executor-card {
-            background: var(--panel-bg); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px;
-            display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-            animation: fadeInUp 0.4s var(--ease) both; transition: border-color .2s ease, transform .2s ease;
+        .executor-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
-        .executor-card:hover { border-color: rgba(37,99,235,0.5); transform: translateY(-1px); }
-        .executor-info { display: flex; gap: 14px; min-width: 0; flex: 1; }
-        .executor-icon { width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0; background: var(--danger-soft); display: flex; align-items: center; justify-content: center; font-size: 19px; overflow: hidden; }
-        .executor-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .executor-info h3 { margin: 0 0 4px; font-size: 15.5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-        .executor-info p { margin: 0; font-size: 12.5px; color: var(--text-muted); max-width: 480px; }
-        .verified-badge { display: inline-flex; align-items: center; gap: 3px; background: rgba(16,185,129,0.14); color: var(--success); font-size: 10.5px; font-weight: 800; padding: 2px 8px; border-radius: 999px; }
-        .executor-actions { display: flex; gap: 8px; flex-shrink: 0; }
+
+        .executor-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.4s var(--ease) both;
+            transition: border-color .2s ease, transform .2s ease;
+        }
+
+        .executor-card:hover {
+            border-color: rgba(37, 99, 235, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .executor-info {
+            display: flex;
+            gap: 14px;
+            min-width: 0;
+            flex: 1;
+        }
+
+        .executor-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            flex-shrink: 0;
+            background: var(--danger-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            overflow: hidden;
+        }
+
+        .executor-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .executor-info h3 {
+            margin: 0 0 4px;
+            font-size: 15.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .executor-info p {
+            margin: 0;
+            font-size: 12.5px;
+            color: var(--text-muted);
+            max-width: 480px;
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            background: rgba(16, 185, 129, 0.14);
+            color: var(--success);
+            font-size: 10.5px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 999px;
+        }
+
+        .executor-actions {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
 
         /* ============== MODAIS ============== */
         .modal-overlay {
-            display: none; position: fixed; inset: 0; background: rgba(5,7,12,0.82); backdrop-filter: blur(6px);
-            justify-content: center; align-items: center; z-index: 1000; padding: 20px;
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 7, 12, 0.82);
+            backdrop-filter: blur(6px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
         }
+
         .modal {
-            background: var(--panel-bg); padding: 30px; border-radius: var(--radius-lg); width: 440px; max-width: 100%;
-            border: 1px solid var(--border); box-shadow: 0 24px 60px rgba(0,0,0,0.55);
-            transform: scale(0.95) translateY(8px); opacity: 0; animation: modalFadeIn 0.22s var(--ease) forwards;
-            max-height: 88vh; overflow-y: auto;
+            background: var(--panel-bg);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            width: 440px;
+            max-width: 100%;
+            border: 1px solid var(--border);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+            transform: scale(0.95) translateY(8px);
+            opacity: 0;
+            animation: modalFadeIn 0.22s var(--ease) forwards;
+            max-height: 88vh;
+            overflow-y: auto;
         }
-        @keyframes modalFadeIn { to { transform: scale(1) translateY(0); opacity: 1; } }
-        .modal h2 { margin-top: 0; font-size: 21px; margin-bottom: 22px; }
-        .form-group { margin-bottom: 18px; }
-        .form-group label { display: block; margin-bottom: 7px; font-size: 13.5px; font-weight: 600; color: #d4d4d8; }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 12px; border-radius: var(--radius-sm); background: var(--bg-color);
-            border: 1px solid var(--border); color: white; box-sizing: border-box; font-family: 'Inter', sans-serif; font-size: 14px;
+
+        @keyframes modalFadeIn {
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
         }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
-        .password-field-wrap { position: relative; }
+
+        .modal h2 {
+            margin-top: 0;
+            font-size: 21px;
+            margin-bottom: 22px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #d4d4d8;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            color: white;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .password-field-wrap {
+            position: relative;
+        }
+
         .password-toggle {
-            position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-            background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 12.5px; font-weight: 700; padding: 4px 6px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 4px 6px;
         }
-        .password-toggle:hover { color: white; }
-        .modal-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
-        .modal-footer-link { text-align: center; margin-top: 16px; font-size: 13px; color: var(--text-muted); }
+
+        .password-toggle:hover {
+            color: white;
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .modal-footer-link {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
 
         /* ============== PERFIL ============== */
-        .profile-stats { display: flex; gap: 12px; margin: 4px 0 20px; }
-        .profile-stat { flex: 1; background: var(--bg-color); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px; text-align: center; }
-        .profile-stat .num { font-size: 22px; font-weight: 800; color: var(--accent); }
-        .profile-stat .label { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
-        .profile-scripts-list { max-height: 220px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
-        .profile-script-item { background: var(--bg-color); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; font-size: 13px; display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+        .profile-stats {
+            display: flex;
+            gap: 12px;
+            margin: 4px 0 20px;
+        }
+
+        .profile-stat {
+            flex: 1;
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            text-align: center;
+        }
+
+        .profile-stat .num {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .profile-stat .label {
+            font-size: 11.5px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .profile-scripts-list {
+            max-height: 220px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .profile-script-item {
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px 12px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: center;
+        }
 
         /* ============== FOOTER ============== */
-        .footer { text-align: center; color: var(--text-faint); font-size: 12.5px; margin-top: 46px; padding: 24px 0 10px; border-top: 1px solid var(--border); }
-        .footer-brand { font-weight: 700; color: var(--text-muted); margin-bottom: 4px; }
-        .footer-version { opacity: .7; }
+        .footer {
+            text-align: center;
+            color: var(--text-faint);
+            font-size: 12.5px;
+            margin-top: 46px;
+            padding: 24px 0 10px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-brand {
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .footer-version {
+            opacity: .7;
+        }
 
         /* ============== ANIMAÇÕES ============== */
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
-        }
-        .header { animation: fadeInUp 0.5s var(--ease) both; }
-        .search-wrap { animation: fadeInUp 0.5s var(--ease) 0.06s both; }
-        .tabs { animation: fadeInUp 0.5s var(--ease) 0.1s both; }
-        .script-card, .executor-card { animation: fadeInUp 0.4s var(--ease) both; }
 
-        button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
-            outline: 2px solid var(--accent); outline-offset: 2px;
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.001ms !important;
+                transition-duration: 0.001ms !important;
+                scroll-behavior: auto !important;
+            }
         }
-        button:active { transform: scale(0.97); }
 
-        .spinner { width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.35); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; }
-        @keyframes spin { to { transform: rotate(360deg); } }
+        .header {
+            animation: fadeInUp 0.5s var(--ease) both;
+        }
+
+        .search-wrap {
+            animation: fadeInUp 0.5s var(--ease) 0.06s both;
+        }
+
+        .tabs {
+            animation: fadeInUp 0.5s var(--ease) 0.1s both;
+        }
+
+        .script-card,
+        .executor-card {
+            animation: fadeInUp 0.4s var(--ease) both;
+        }
+
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        [tabindex]:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        .spinner {
+            width: 14px;
+            height: 14px;
+            border: 2px solid rgba(255, 255, 255, 0.35);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
         /* ============== TOASTS ============== */
-        #toastBox { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 2000; display: flex; flex-direction: column; gap: 8px; align-items: center; max-width: 92vw; }
+        #toastBox {
+            position: fixed;
+            left: 50%;
+            bottom: 24px;
+            transform: translateX(-50%);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            max-width: 92vw;
+        }
+
         .toast {
-            display: flex; align-items: center; gap: 8px;
-            background: var(--panel-bg); border: 1px solid var(--border); color: var(--text-main);
-            padding: 12px 18px; border-radius: 999px; font-size: 13px; font-weight: 600;
-            box-shadow: 0 10px 28px rgba(0,0,0,0.5); animation: fadeInUp 0.25s var(--ease) both;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 12px 18px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 0.25s var(--ease) both;
             max-width: 100%;
         }
-        .toast .toast-msg { overflow-wrap: anywhere; }
-        .toast.success { color: var(--success); border-color: rgba(16,185,129,0.4); }
-        .toast.error { color: var(--danger); border-color: rgba(239,68,68,0.4); }
-        .toast.warning { color: var(--warning); border-color: rgba(245,158,11,0.4); }
-        .toast.info { color: var(--info); border-color: rgba(59,130,246,0.4); }
 
-        .input-error { border-color: var(--danger) !important; box-shadow: 0 0 0 3px rgba(239,68,68,0.15) !important; }
+        .toast .toast-msg {
+            overflow-wrap: anywhere;
+        }
+
+        .toast.success {
+            color: var(--success);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .toast.error {
+            color: var(--danger);
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+
+        .toast.warning {
+            color: var(--warning);
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+
+        .toast.info {
+            color: var(--info);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        .input-error {
+            border-color: var(--danger) !important;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+        }
 
         /* ============== RESPONSIVO ============== */
         @media (max-width: 640px) {
-            body { padding: 12px; }
-            .header { padding: 14px; }
-            .header-actions { width: 100%; justify-content: space-between; }
-            .title h1 { font-size: 18px; }
-            .script-card, .executor-card { flex-direction: column; align-items: stretch; }
-            .action-btns, .executor-actions { width: 100%; }
-            .action-btns button, .executor-actions button, .executor-actions a { flex: 1; text-align: center; }
-            .user-chip-email { max-width: 90px; }
-            .modal { padding: 22px; }
+            body {
+                padding: 12px;
+            }
+
+            .header {
+                padding: 14px;
+            }
+
+            .header-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .title h1 {
+                font-size: 18px;
+            }
+
+            .script-card,
+            .executor-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .action-btns,
+            .executor-actions {
+                width: 100%;
+            }
+
+            .action-btns button,
+            .executor-actions button,
+            .executor-actions a {
+                flex: 1;
+                text-align: center;
+            }
+
+            .user-chip-email {
+                max-width: 90px;
+            }
+
+            .modal {
+                padding: 22px;
+            }
         }
+
         /* ============== FUNDO ANIMADO (low-poly) ============== */
         #bg-canvas {
             position: fixed;
-            top: 0; left: 0;
-            width: 100vw; height: 100vh;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             z-index: -2;
             display: block;
         }
+
         .bg-orb-layer {
             position: fixed;
             inset: 0;
@@ -397,731 +1164,805 @@
             overflow: hidden;
             pointer-events: none;
         }
+
         .orb {
             position: absolute;
             border-radius: 50%;
             filter: blur(90px);
             opacity: 0.22;
         }
-        .orb-1 { width: 380px; height: 380px; background: var(--accent); top: -100px; left: -100px; }
-        .orb-2 { width: 460px; height: 460px; background: var(--danger); bottom: -140px; right: -100px; }
-        @media (prefers-reduced-motion: no-preference) {
-            .orb { animation: orbFloat 22s ease-in-out infinite alternate; }
-            .orb-2 { animation-delay: -8s; }
+
+        .orb-1 {
+            width: 380px;
+            height: 380px;
+            background: var(--accent);
+            top: -100px;
+            left: -100px;
         }
+
+        .orb-2 {
+            width: 460px;
+            height: 460px;
+            background: var(--danger);
+            bottom: -140px;
+            right: -100px;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .orb {
+                animation: orbFloat 22s ease-in-out infinite alternate;
+            }
+
+            .orb-2 {
+                animation-delay: -8s;
+            }
+        }
+
         @keyframes orbFloat {
-            0% { transform: translate(0,0) scale(1); }
-            100% { transform: translate(24px, 36px) scale(1.08); }
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(24px, 36px) scale(1.08);
+            }
         }
     </style>
 </head>
+
 <body>
 
-<canvas id="bg-canvas" aria-hidden="true"></canvas>
-<div class="bg-orb-layer" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-</div>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="bg-orb-layer" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
 
-<div class="container">
-    <div class="header">
-        <div class="logo-area" onclick="switchSection('scripts')" role="button" tabindex="0" aria-label="Ir para a página inicial" onkeydown="if(event.key==='Enter') switchSection('scripts')">
-            <div class="logo-svg">
-                <div class="logo-ring"></div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14.5 17.5L3 6V3h3l11.5 11.5"/>
-                    <path d="M13 19l6-6"/>
-                    <path d="M16 16l4 4"/>
-                    <path d="M19 21l2-2"/>
-                    <path d="M11 9L8 12"/>
-                </svg>
+    <div class="container">
+        <div class="header">
+            <div class="logo-area" onclick="switchSection('scripts')" role="button" tabindex="0"
+                aria-label="Ir para a página inicial" onkeydown="if(event.key==='Enter') switchSection('scripts')">
+                <div class="logo-svg">
+                    <div class="logo-ring"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.5 17.5L3 6V3h3l11.5 11.5" />
+                        <path d="M13 19l6-6" />
+                        <path d="M16 16l4 4" />
+                        <path d="M19 21l2-2" />
+                        <path d="M11 9L8 12" />
+                    </svg>
+                </div>
+                <div class="title">
+                    <h1>Ninja Scripts</h1>
+                    <div class="sync-status">
+                        <div class="dot"></div> Nuvem sincronizada
+                    </div>
+                </div>
             </div>
-            <div class="title">
-                <h1>Ninja Scripts</h1>
-                <div class="sync-status"><div class="dot"></div> Nuvem sincronizada</div>
+
+            <div class="header-actions" id="guestActions">
+                <button class="btn-outline" onclick="openAuthModal('login')">Entrar</button>
+                <button class="btn-primary" onclick="openAuthModal('register')">Criar Conta</button>
             </div>
-        </div>
 
-        <div class="header-actions" id="guestActions">
-            <button class="btn-outline" onclick="openAuthModal('login')">Entrar</button>
-            <button class="btn-primary" onclick="openAuthModal('register')">Criar Conta</button>
-        </div>
-
-        <div class="header-actions" id="userActions" style="display:none;">
-            <button class="btn-primary" id="postScriptBtn" onclick="openScriptModal()">+ Postar Script</button>
-            <div class="user-menu" id="userMenu">
-                <button class="user-chip" id="userChipBtn" onclick="toggleUserDropdown()" aria-haspopup="true" aria-expanded="false">
-                    <span class="user-avatar" id="userAvatar">?</span>
-                    <span class="user-chip-email" id="userEmailDisplay"></span>
-                </button>
-                <div class="user-dropdown" id="userDropdown" role="menu">
-                    <button class="user-dropdown-item" role="menuitem" onclick="openProfileModal()">&#x1F464; Meu Perfil</button>
-                    <div class="user-dropdown-divider"></div>
-                    <button class="user-dropdown-item danger" role="menuitem" onclick="logout()">&#x1F6AA; Sair</button>
+            <div class="header-actions" id="userActions" style="display:none;">
+                <button class="btn-primary" id="postScriptBtn" onclick="openScriptModal()">+ Postar Script</button>
+                <div class="user-menu" id="userMenu">
+                    <button class="user-chip" id="userChipBtn" onclick="toggleUserDropdown()" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span class="user-avatar" id="userAvatar">?</span>
+                        <span class="user-chip-email" id="userEmailDisplay"></span>
+                    </button>
+                    <div class="user-dropdown" id="userDropdown" role="menu">
+                        <button class="user-dropdown-item" role="menuitem" onclick="openProfileModal()">&#x1F464; Meu
+                            Perfil</button>
+                        <div class="user-dropdown-divider"></div>
+                        <button class="user-dropdown-item danger" role="menuitem" onclick="logout()">&#x1F6AA;
+                            Sair</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <nav class="main-nav" role="tablist" aria-label="Navegação principal">
-        <button class="main-nav-btn active" id="navScriptsBtn" role="tab" aria-selected="true" aria-controls="scriptsSection" onclick="switchSection('scripts')" onkeydown="navKeydown(event,'scripts')">
-            <span class="main-nav-icon">&#x1F4DC;</span> Scripts
-        </button>
-        <button class="main-nav-btn" id="navExecutorsBtn" role="tab" aria-selected="false" aria-controls="executorsSection" onclick="switchSection('executors')" onkeydown="navKeydown(event,'executors')">
-            <span class="main-nav-icon">&#x1F6E1;&#xFE0F;</span> Executores Oficiais
-        </button>
-    </nav>
+        <nav class="main-nav" role="tablist" aria-label="Navegação principal">
+            <button class="main-nav-btn active" id="navScriptsBtn" role="tab" aria-selected="true"
+                aria-controls="scriptsSection" onclick="switchSection('scripts')"
+                onkeydown="navKeydown(event,'scripts')">
+                <span class="main-nav-icon">&#x1F4DC;</span> Scripts
+            </button>
+            <button class="main-nav-btn" id="navExecutorsBtn" role="tab" aria-selected="false"
+                aria-controls="executorsSection" onclick="switchSection('executors')"
+                onkeydown="navKeydown(event,'executors')">
+                <span class="main-nav-icon">&#x1F6E1;&#xFE0F;</span> Executores Oficiais
+            </button>
+        </nav>
 
-    <!-- ===================== SEÇÃO: SCRIPTS ===================== -->
-    <div id="scriptsSection" role="tabpanel" aria-labelledby="navScriptsBtn">
-        <div class="search-wrap">
-            <label for="searchInput" class="sr-only" style="position:absolute; left:-9999px;">Buscar scripts por nome ou jogo</label>
-            <input type="text" class="search-bar" placeholder="Buscar por nome ou jogo..." id="searchInput" oninput="onSearchInput()">
-            <button class="search-clear" id="searchClearBtn" onclick="clearSearch()" aria-label="Limpar busca" type="button">&#x2715;</button>
-        </div>
-
-        <div class="tabs" id="categoryTabs" role="group" aria-label="Filtrar por categoria"></div>
-
-        <div id="contentArea">
-            <div class="skeleton-card"><div class="skeleton-box" style="width:42px;height:42px;"></div><div style="flex:1"><div class="skeleton-box" style="height:16px;width:60%;margin-bottom:8px;"></div><div class="skeleton-box" style="height:12px;width:35%;"></div></div></div>
-            <div class="skeleton-card"><div class="skeleton-box" style="width:42px;height:42px;"></div><div style="flex:1"><div class="skeleton-box" style="height:16px;width:50%;margin-bottom:8px;"></div><div class="skeleton-box" style="height:12px;width:30%;"></div></div></div>
-        </div>
-    </div>
-
-    <!-- ===================== SEÇÃO: EXECUTORES ===================== -->
-    <div id="executorsSection" role="tabpanel" aria-labelledby="navExecutorsBtn" style="display:none;">
-        <div class="section-header">
-            <div>
-                <h2>&#x1F6E1;&#xFE0F; Executores Oficiais</h2>
-                <p class="section-subtitle">Links reunidos e mantidos pela administração do site.</p>
+        <!-- ===================== SEÇÃO: SCRIPTS ===================== -->
+        <div id="scriptsSection" role="tabpanel" aria-labelledby="navScriptsBtn">
+            <div class="search-wrap">
+                <label for="searchInput" class="sr-only" style="position:absolute; left:-9999px;">Buscar scripts por
+                    nome ou jogo</label>
+                <input type="text" class="search-bar" placeholder="Buscar por nome ou jogo..." id="searchInput"
+                    oninput="onSearchInput()">
+                <button class="search-clear" id="searchClearBtn" onclick="clearSearch()" aria-label="Limpar busca"
+                    type="button">&#x2715;</button>
             </div>
-            <button class="btn-primary" id="addExecutorBtn" onclick="openExecutorModal()" style="display:none; background-color: var(--danger); box-shadow: 0 4px 12px rgba(239,68,68,0.35);">+ Adicionar Executor</button>
-        </div>
-        <div id="executorsArea">
-            <div class="skeleton-card"><div class="skeleton-box" style="width:42px;height:42px;"></div><div style="flex:1"><div class="skeleton-box" style="height:16px;width:40%;"></div></div></div>
-        </div>
-    </div>
 
-    <div class="footer">
-        <div class="footer-brand">&#x1F977; Ninja Scripts</div>
-        <div class="footer-version">v2.0 · Feito para a comunidade Roblox · © <span id="footerYear"></span></div>
-    </div>
-</div>
+            <div class="tabs" id="categoryTabs" role="group" aria-label="Filtrar por categoria"></div>
 
-
-<!-- Modal de Auth -->
-<div class="modal-overlay" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" onmousedown="handleBackdropClick(event,'authModal')">
-    <div class="modal" onmousedown="event.stopPropagation()">
-        <h2 id="authTitle">Entrar</h2>
-        <div class="form-group">
-            <label for="authEmail">E-mail</label>
-            <input type="email" id="authEmail" placeholder="seu@email.com" onkeydown="if(event.key==='Enter') handleAuth()" autocomplete="email">
-        </div>
-        <div class="form-group" id="authPasswordGroup">
-            <label for="authPassword">Senha</label>
-            <div class="password-field-wrap">
-                <input type="password" id="authPassword" placeholder="Mínimo 6 caracteres" onkeydown="if(event.key==='Enter') handleAuth()" autocomplete="current-password">
-                <button type="button" class="password-toggle" onclick="togglePasswordVisibility('authPassword', this)">MOSTRAR</button>
+            <div id="contentArea">
+                <div class="skeleton-card">
+                    <div class="skeleton-box" style="width:42px;height:42px;"></div>
+                    <div style="flex:1">
+                        <div class="skeleton-box" style="height:16px;width:60%;margin-bottom:8px;"></div>
+                        <div class="skeleton-box" style="height:12px;width:35%;"></div>
+                    </div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-box" style="width:42px;height:42px;"></div>
+                    <div style="flex:1">
+                        <div class="skeleton-box" style="height:16px;width:50%;margin-bottom:8px;"></div>
+                        <div class="skeleton-box" style="height:12px;width:30%;"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="modal-footer-link" id="forgotPasswordLink" style="text-align:right; margin-top:-8px; margin-bottom:16px;">
-            <button class="btn-link" onclick="handleForgotPassword()" type="button">Esqueci minha senha</button>
-        </div>
-        <div class="modal-actions">
-            <button class="btn-outline" onclick="closeAuthModal()" type="button">Cancelar</button>
-            <button class="btn-primary" id="authSubmitBtn" onclick="handleAuth()" type="button">Confirmar</button>
-        </div>
-    </div>
-</div>
 
-<!-- Modal de Adicionar/Editar Script -->
-<div class="modal-overlay" id="scriptModal" role="dialog" aria-modal="true" aria-labelledby="scriptModalTitle" onmousedown="handleBackdropClick(event,'scriptModal')">
-    <div class="modal" onmousedown="event.stopPropagation()">
-        <h2 id="scriptModalTitle">Adicionar Novo Script</h2>
-        <div class="form-group">
-            <label for="scriptName">Nome do Script</label>
-            <input type="text" id="scriptName" placeholder="Ex: Auto Farm Level Max">
-        </div>
-        <div class="form-group">
-            <label for="scriptGame">Jogo</label>
-            <select id="scriptGame"></select>
-        </div>
-        <div class="form-group">
-            <label for="scriptCode">Código do Script</label>
-            <textarea id="scriptCode" rows="4" placeholder="Cole o código lua aqui..."></textarea>
-        </div>
-        <div class="modal-actions">
-            <button class="btn-outline" onclick="closeScriptModal()" type="button">Cancelar</button>
-            <button class="btn-primary" id="saveScriptBtn" onclick="saveScript()" type="button"><span id="saveScriptBtnLabel">Salvar na Nuvem</span></button>
-        </div>
-    </div>
-</div>
-
-<!-- Modal de Adicionar/Editar Executor (só admin) -->
-<div class="modal-overlay" id="executorModal" role="dialog" aria-modal="true" aria-labelledby="executorModalTitle" onmousedown="handleBackdropClick(event,'executorModal')">
-    <div class="modal" onmousedown="event.stopPropagation()">
-        <h2 id="executorModalTitle">Adicionar Executor Oficial</h2>
-        <div class="form-group">
-            <label for="executorName">Nome do Executor</label>
-            <input type="text" id="executorName" placeholder="Ex: Fluxus, Delta, Arceus X...">
-        </div>
-        <div class="form-group">
-            <label for="executorUrl">Link (download / site oficial)</label>
-            <input type="text" id="executorUrl" placeholder="https://...">
-        </div>
-        <div class="form-group">
-            <label for="executorImageUrl">Link da imagem/logo (opcional)</label>
-            <input type="text" id="executorImageUrl" placeholder="https://.../logo.png">
-        </div>
-        <div class="form-group">
-            <label for="executorDesc">Descrição (opcional)</label>
-            <textarea id="executorDesc" rows="3" placeholder="Observações, compatibilidade, versão, etc."></textarea>
-        </div>
-        <div class="modal-actions">
-            <button class="btn-outline" onclick="closeExecutorModal()" type="button">Cancelar</button>
-            <button class="btn-primary" id="saveExecutorBtn" onclick="saveExecutor()" type="button"><span id="saveExecutorBtnLabel">Salvar Executor</span></button>
-        </div>
-    </div>
-</div>
-
-<!-- Modal de Perfil -->
-<div class="modal-overlay" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle" onmousedown="handleBackdropClick(event,'profileModal')">
-    <div class="modal" onmousedown="event.stopPropagation()">
-        <h2 id="profileModalTitle">&#x1F464; Meu Perfil</h2>
-        <p style="color:var(--text-muted); font-size:13.5px; margin-top:-14px;" id="profileEmailLine"></p>
-        <div class="profile-stats">
-            <div class="profile-stat">
-                <div class="num" id="profileScriptCount">—</div>
-                <div class="label">SCRIPTS POSTADOS</div>
+        <!-- ===================== SEÇÃO: EXECUTORES ===================== -->
+        <div id="executorsSection" role="tabpanel" aria-labelledby="navExecutorsBtn" style="display:none;">
+            <div class="section-header">
+                <div>
+                    <h2>&#x1F6E1;&#xFE0F; Executores Oficiais</h2>
+                    <p class="section-subtitle">Links reunidos e mantidos pela administração do site.</p>
+                </div>
+                <button class="btn-primary" id="addExecutorBtn" onclick="openExecutorModal()"
+                    style="display:none; background-color: var(--danger); box-shadow: 0 4px 12px rgba(239,68,68,0.35);">+
+                    Adicionar Executor</button>
             </div>
-            <div class="profile-stat">
-                <div class="num" id="profileMemberSince">—</div>
-                <div class="label">MEMBRO DESDE</div>
+            <div id="executorsArea">
+                <div class="skeleton-card">
+                    <div class="skeleton-box" style="width:42px;height:42px;"></div>
+                    <div style="flex:1">
+                        <div class="skeleton-box" style="height:16px;width:40%;"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <label style="display:block; margin-bottom:8px; font-size:13.5px; font-weight:600; color:#d4d4d8;">Seus scripts</label>
-        <div class="profile-scripts-list" id="profileScriptsList"></div>
-        <div class="modal-actions">
-            <button class="btn-outline" onclick="closeProfileModal()" type="button">Fechar</button>
+
+        <div class="footer">
+            <div class="footer-brand">&#x1F977; Ninja Scripts</div>
+            <div class="footer-version">v2.0 · Feito para a comunidade Roblox · © <span id="footerYear"></span></div>
         </div>
     </div>
-</div>
 
-<div id="toastBox" aria-live="polite" role="status"></div>
 
-<script>
-    /* =====================================================================
-       NINJA SCRIPTS — script.js (organizado em módulos lógicos)
-       Módulos: CONFIG · GAMES · AUTH · DB(scripts) · DB(executors) · UI/NAV
-       · SEARCH · TOASTS · PROFILE · UTILS
-       ===================================================================== */
+    <!-- Modal de Auth -->
+    <div class="modal-overlay" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle"
+        onmousedown="handleBackdropClick(event,'authModal')">
+        <div class="modal" onmousedown="event.stopPropagation()">
+            <h2 id="authTitle">Entrar</h2>
+            <div class="form-group">
+                <label for="authEmail">E-mail</label>
+                <input type="email" id="authEmail" placeholder="seu@email.com"
+                    onkeydown="if(event.key==='Enter') handleAuth()" autocomplete="email">
+            </div>
+            <div class="form-group" id="authPasswordGroup">
+                <label for="authPassword">Senha</label>
+                <div class="password-field-wrap">
+                    <input type="password" id="authPassword" placeholder="Mínimo 6 caracteres"
+                        onkeydown="if(event.key==='Enter') handleAuth()" autocomplete="current-password">
+                    <button type="button" class="password-toggle"
+                        onclick="togglePasswordVisibility('authPassword', this)">MOSTRAR</button>
+                </div>
+            </div>
+            <div class="modal-footer-link" id="forgotPasswordLink"
+                style="text-align:right; margin-top:-8px; margin-bottom:16px;">
+                <button class="btn-link" onclick="handleForgotPassword()" type="button">Esqueci minha senha</button>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-outline" onclick="closeAuthModal()" type="button">Cancelar</button>
+                <button class="btn-primary" id="authSubmitBtn" onclick="handleAuth()" type="button">Confirmar</button>
+            </div>
+        </div>
+    </div>
 
-    /* ---------------------- CONFIG / SUPABASE ---------------------- */
-    // A chave abaixo é a "anon/publishable key" do Supabase — pública por
-    // design (protegida pelas policies de RLS no banco). NUNCA coloque aqui
-    // uma "service_role key": essa sim é secreta e nunca deve ir ao frontend.
-    const SUPABASE_URL = 'https://qdrqqyrkbvzpschcdlws.supabase.co';
-    const SUPABASE_KEY = 'sb_publishable_Ukvl_bK8a0okV6Z_7Fc0xA_nU_y5Yk8';
-    const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    <!-- Modal de Adicionar/Editar Script -->
+    <div class="modal-overlay" id="scriptModal" role="dialog" aria-modal="true" aria-labelledby="scriptModalTitle"
+        onmousedown="handleBackdropClick(event,'scriptModal')">
+        <div class="modal" onmousedown="event.stopPropagation()">
+            <h2 id="scriptModalTitle">Adicionar Novo Script</h2>
+            <div class="form-group">
+                <label for="scriptName">Nome do Script</label>
+                <input type="text" id="scriptName" placeholder="Ex: Auto Farm Level Max">
+            </div>
+            <div class="form-group">
+                <label for="scriptGame">Jogo</label>
+                <select id="scriptGame"></select>
+            </div>
+            <div class="form-group">
+                <label for="scriptCode">Código do Script</label>
+                <textarea id="scriptCode" rows="4" placeholder="Cole o código lua aqui..."></textarea>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-outline" onclick="closeScriptModal()" type="button">Cancelar</button>
+                <button class="btn-primary" id="saveScriptBtn" onclick="saveScript()" type="button"><span
+                        id="saveScriptBtnLabel">Salvar na Nuvem</span></button>
+            </div>
+        </div>
+    </div>
 
-    /* ---------------------- GAMES (fonte única de categorias) ---------------------- */
-    // Para adicionar um jogo novo: só acrescente um item aqui.
-    // Ele aparece automaticamente nas abas, no seletor do modal e no ícone do card.
-    const GAMES = [
-        { id: 'Blox Fruits',        icon: '&#x1F348;' },
-        { id: 'Roube um Ovo',       icon: '&#x1F95A;' },
-        { id: 'Adopt Me!',          icon: '&#x1F43E;' },
-        { id: 'Brookhaven &#x1F3E1;RP',    icon: '&#x1F3E1;' },
-        { id: 'Tower of Hell',      icon: '&#x1F5FC;' },
-        { id: 'Murder Mystery 2',   icon: '&#x1F52A;' },
-        { id: 'Piggy',              icon: '&#x1F437;' },
-        { id: 'Arsenal',            icon: '&#x1F52B;' },
-        { id: 'Jailbreak',          icon: '&#x1F694;' },
-        { id: 'Outros',             icon: '&#x1F3AE;' }
-    ];
-    function gameIcon(game) {
-        const g = GAMES.find(x => x.id === game);
-        return g ? g.icon : '&#x1F3AE;';
-    }
+    <!-- Modal de Adicionar/Editar Executor (só admin) -->
+    <div class="modal-overlay" id="executorModal" role="dialog" aria-modal="true" aria-labelledby="executorModalTitle"
+        onmousedown="handleBackdropClick(event,'executorModal')">
+        <div class="modal" onmousedown="event.stopPropagation()">
+            <h2 id="executorModalTitle">Adicionar Executor Oficial</h2>
+            <div class="form-group">
+                <label for="executorName">Nome do Executor</label>
+                <input type="text" id="executorName" placeholder="Ex: Fluxus, Delta, Arceus X...">
+            </div>
+            <div class="form-group">
+                <label for="executorUrl">Link (download / site oficial)</label>
+                <input type="text" id="executorUrl" placeholder="https://...">
+            </div>
+            <div class="form-group">
+                <label for="executorImageUrl">Link da imagem/logo (opcional)</label>
+                <input type="text" id="executorImageUrl" placeholder="https://.../logo.png">
+            </div>
+            <div class="form-group">
+                <label for="executorDesc">Descrição (opcional)</label>
+                <textarea id="executorDesc" rows="3"
+                    placeholder="Observações, compatibilidade, versão, etc."></textarea>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-outline" onclick="closeExecutorModal()" type="button">Cancelar</button>
+                <button class="btn-primary" id="saveExecutorBtn" onclick="saveExecutor()" type="button"><span
+                        id="saveExecutorBtnLabel">Salvar Executor</span></button>
+            </div>
+        </div>
+    </div>
 
-    /* ---------------------- ESTADO GLOBAL ---------------------- */
-    let scriptsData = [];
-    let executorsData = [];
-    let profilesById = {};   // cache de { user_id: { email } } pra mostrar autor
-    let currentCategory = 'Todos';
-    let isAdmin = false;
-    let currentUser = null;
-    let authMode = 'login';
-    let editingScriptId = null;
-    let editingExecutorId = null;
-    let searchDebounceTimer = null;
+    <!-- Modal de Perfil -->
+    <div class="modal-overlay" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle"
+        onmousedown="handleBackdropClick(event,'profileModal')">
+        <div class="modal" onmousedown="event.stopPropagation()">
+            <h2 id="profileModalTitle">&#x1F464; Meu Perfil</h2>
+            <p style="color:var(--text-muted); font-size:13.5px; margin-top:-14px;" id="profileEmailLine"></p>
+            <div class="profile-stats">
+                <div class="profile-stat">
+                    <div class="num" id="profileScriptCount">—</div>
+                    <div class="label">SCRIPTS POSTADOS</div>
+                </div>
+                <div class="profile-stat">
+                    <div class="num" id="profileMemberSince">—</div>
+                    <div class="label">MEMBRO DESDE</div>
+                </div>
+            </div>
+            <label style="display:block; margin-bottom:8px; font-size:13.5px; font-weight:600; color:#d4d4d8;">Seus
+                scripts</label>
+            <div class="profile-scripts-list" id="profileScriptsList"></div>
+            <div class="modal-actions">
+                <button class="btn-outline" onclick="closeProfileModal()" type="button">Fechar</button>
+            </div>
+        </div>
+    </div>
 
-    /* ===================== TOASTS ===================== */
-    const TOAST_ICONS = { success: '&#x2713;', error: '&#x2715;', warning: '&#x26A0;', info: '&#x2139;' };
-    function showToast(message, type) {
-        type = type || 'info';
-        const box = document.getElementById('toastBox');
-        const el = document.createElement('div');
-        el.className = 'toast ' + type;
-        el.innerHTML = `<span aria-hidden="true">${TOAST_ICONS[type] || ''}</span><span class="toast-msg">${escapeHtml(message)}</span>`;
-        box.appendChild(el);
-        setTimeout(() => {
-            el.style.transition = 'opacity .25s ease';
-            el.style.opacity = '0';
-            setTimeout(() => el.remove(), 250);
-        }, 3200);
-    }
+    <div id="toastBox" aria-live="polite" role="status"></div>
 
-    /* ===================== UTILS ===================== */
-    function escapeHtml(str) {
-        return String(str ?? '')
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;');
-    }
+    <script>
+        /* =====================================================================
+           NINJA SCRIPTS — script.js (organizado em módulos lógicos)
+           Módulos: CONFIG · GAMES · AUTH · DB(scripts) · DB(executors) · UI/NAV
+           · SEARCH · TOASTS · PROFILE · UTILS
+           ===================================================================== */
 
-    function formatDate(iso) {
-        if (!iso) return '';
-        try {
-            return new Date(iso).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
-        } catch (e) { return ''; }
-    }
+        /* ---------------------- CONFIG / SUPABASE ---------------------- */
+        // A chave abaixo é a "anon/publishable key" do Supabase — pública por
+        // design (protegida pelas policies de RLS no banco). NUNCA coloque aqui
+        // uma "service_role key": essa sim é secreta e nunca deve ir ao frontend.
+        const SUPABASE_URL = 'https://qdrqqyrkbvzpschcdlws.supabase.co';
+        const SUPABASE_KEY = 'sb_publishable_Ukvl_bK8a0okV6Z_7Fc0xA_nU_y5Yk8';
+        const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    function friendlyDbError(context) {
-        if (!navigator.onLine) return 'Você está sem internet no momento.';
-        return context || 'Não foi possível completar a ação. Tente novamente.';
-    }
+        /* ---------------------- GAMES (fonte única de categorias) ---------------------- */
+        // Para adicionar um jogo novo: só acrescente um item aqui.
+        // Ele aparece automaticamente nas abas, no seletor do modal e no ícone do card.
+        const GAMES = [
+            {id: 'Blox Fruits', icon: '&#x1F348;'},
+            {id: 'Roube um Ovo', icon: '&#x1F95A;'},
+            {id: 'Adopt Me!', icon: '&#x1F43E;'},
+            {id: 'Brookhaven &#x1F3E1;RP', icon: '&#x1F3E1;'},
+            {id: 'Tower of Hell', icon: '&#x1F5FC;'},
+            {id: 'Murder Mystery 2', icon: '&#x1F52A;'},
+            {id: 'Piggy', icon: '&#x1F437;'},
+            {id: 'Arsenal', icon: '&#x1F52B;'},
+            {id: 'Jailbreak', icon: '&#x1F694;'},
+            {id: 'Construa um barco', icon: '&#x1F3AE;'},
 
-    function translateAuthError(msg) {
-        if (!msg) return 'Ocorreu um erro. Tente novamente.';
-        const m = msg.toLowerCase();
-        if (m.includes('already registered') || m.includes('already exists')) return 'Este e-mail já possui uma conta. Tente entrar.';
-        if (m.includes('invalid login credentials')) return 'E-mail ou senha incorretos.';
-        if (m.includes('email not confirmed')) return 'Confirme seu e-mail antes de entrar (verifique sua caixa de entrada).';
-        if (m.includes('password') && m.includes('6')) return 'A senha precisa ter no mínimo 6 caracteres.';
-        if (m.includes('invalid email')) return 'Digite um e-mail válido.';
-        if (m.includes('for security purposes') || m.includes('rate limit')) return 'Muitas tentativas seguidas. Aguarde um instante e tente de novo.';
-        return msg;
-    }
-
-    function togglePasswordVisibility(inputId, btn) {
-        const input = document.getElementById(inputId);
-        const show = input.type === 'password';
-        input.type = show ? 'text' : 'password';
-        btn.textContent = show ? 'OCULTAR' : 'MOSTRAR';
-    }
-
-    function handleBackdropClick(event, modalId) {
-        if (event.target.id === modalId) {
-            document.getElementById(modalId).style.display = 'none';
+        ];
+        function gameIcon(game) {
+            const g = GAMES.find(x => x.id === game);
+            return g ? g.icon : '&#x1F3AE;';
         }
-    }
 
-    // ESC fecha qualquer modal aberto
-    document.addEventListener('keydown', (e) => {
-        if (e.key !== 'Escape') return;
-        ['authModal', 'scriptModal', 'executorModal', 'profileModal'].forEach(id => {
-            const m = document.getElementById(id);
-            if (m && m.style.display === 'flex') m.style.display = 'none';
-        });
-        closeUserDropdown();
-    });
+        /* ---------------------- ESTADO GLOBAL ---------------------- */
+        let scriptsData = [];
+        let executorsData = [];
+        let profilesById = {};   // cache de { user_id: { email } } pra mostrar autor
+        let currentCategory = 'Todos';
+        let isAdmin = false;
+        let currentUser = null;
+        let authMode = 'login';
+        let editingScriptId = null;
+        let editingExecutorId = null;
+        let searchDebounceTimer = null;
 
-    // Fecha o menu do usuário se clicar fora dele
-    document.addEventListener('click', (e) => {
-        const menu = document.getElementById('userMenu');
-        if (menu && !menu.contains(e.target)) closeUserDropdown();
-    });
-
-    function navKeydown(e, currentSection) {
-        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-        e.preventDefault();
-        const other = currentSection === 'scripts' ? 'executors' : 'scripts';
-        switchSection(other);
-        document.getElementById(other === 'scripts' ? 'navScriptsBtn' : 'navExecutorsBtn').focus();
-    }
-
-    /* ===================== AUTENTICAÇÃO ===================== */
-    async function checkUser() {
-        const { data: { session } } = await sb.auth.getSession();
-        currentUser = session ? session.user : null;
-        await refreshAdminStatus();
-        updateUI();
-    }
-
-    sb.auth.onAuthStateChange(async (event, session) => {
-        currentUser = session ? session.user : null;
-        await refreshAdminStatus();
-        updateUI();
-    });
-
-    // Verifica no banco se a conta logada é admin (coluna is_admin em profiles).
-    // Isso é só para MOSTRAR/ESCONDER botões — a proteção de verdade contra
-    // usuários maliciosos está nas policies de RLS do Supabase (ver SQL em anexo).
-    async function refreshAdminStatus() {
-        if (!currentUser) { isAdmin = false; return; }
-        try {
-            const { data, error } = await sb.from('profiles').select('is_admin').eq('id', currentUser.id).single();
-            isAdmin = !error && data && data.is_admin === true;
-        } catch (e) {
-            isAdmin = false;
+        /* ===================== TOASTS ===================== */
+        const TOAST_ICONS = {success: '&#x2713;', error: '&#x2715;', warning: '&#x26A0;', info: '&#x2139;'};
+        function showToast(message, type) {
+            type = type || 'info';
+            const box = document.getElementById('toastBox');
+            const el = document.createElement('div');
+            el.className = 'toast ' + type;
+            el.innerHTML = `<span aria-hidden="true">${TOAST_ICONS[type] || ''}</span><span class="toast-msg">${escapeHtml(message)}</span>`;
+            box.appendChild(el);
+            setTimeout(() => {
+                el.style.transition = 'opacity .25s ease';
+                el.style.opacity = '0';
+                setTimeout(() => el.remove(), 250);
+            }, 3200);
         }
-    }
 
-    function updateUI() {
-        if (currentUser) {
-            document.getElementById('guestActions').style.display = 'none';
-            document.getElementById('userActions').style.display = 'flex';
-            const email = currentUser.email || '';
-            document.getElementById('userEmailDisplay').innerHTML = escapeHtml(email) + (isAdmin ? ' <span class="admin-badge">&#x1F451; ADMIN</span>' : '');
-            document.getElementById('userAvatar').textContent = email.charAt(0).toUpperCase() || '?';
-            document.getElementById('postScriptBtn').style.display = 'inline-block';
-        } else {
-            document.getElementById('guestActions').style.display = 'flex';
-            document.getElementById('userActions').style.display = 'none';
+        /* ===================== UTILS ===================== */
+        function escapeHtml(str) {
+            return String(str ?? '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function formatDate(iso) {
+            if (!iso) return '';
+            try {
+                return new Date(iso).toLocaleDateString('pt-BR', {day: '2-digit', month: 'short', year: 'numeric'});
+            } catch (e) {return '';}
+        }
+
+        function friendlyDbError(context) {
+            if (!navigator.onLine) return 'Você está sem internet no momento.';
+            return context || 'Não foi possível completar a ação. Tente novamente.';
+        }
+
+        function translateAuthError(msg) {
+            if (!msg) return 'Ocorreu um erro. Tente novamente.';
+            const m = msg.toLowerCase();
+            if (m.includes('already registered') || m.includes('already exists')) return 'Este e-mail já possui uma conta. Tente entrar.';
+            if (m.includes('invalid login credentials')) return 'E-mail ou senha incorretos.';
+            if (m.includes('email not confirmed')) return 'Confirme seu e-mail antes de entrar (verifique sua caixa de entrada).';
+            if (m.includes('password') && m.includes('6')) return 'A senha precisa ter no mínimo 6 caracteres.';
+            if (m.includes('invalid email')) return 'Digite um e-mail válido.';
+            if (m.includes('for security purposes') || m.includes('rate limit')) return 'Muitas tentativas seguidas. Aguarde um instante e tente de novo.';
+            return msg;
+        }
+
+        function togglePasswordVisibility(inputId, btn) {
+            const input = document.getElementById(inputId);
+            const show = input.type === 'password';
+            input.type = show ? 'text' : 'password';
+            btn.textContent = show ? 'OCULTAR' : 'MOSTRAR';
+        }
+
+        function handleBackdropClick(event, modalId) {
+            if (event.target.id === modalId) {
+                document.getElementById(modalId).style.display = 'none';
+            }
+        }
+
+        // ESC fecha qualquer modal aberto
+        document.addEventListener('keydown', (e) => {
+            if (e.key !== 'Escape') return;
+            ['authModal', 'scriptModal', 'executorModal', 'profileModal'].forEach(id => {
+                const m = document.getElementById(id);
+                if (m && m.style.display === 'flex') m.style.display = 'none';
+            });
             closeUserDropdown();
-        }
-        document.getElementById('addExecutorBtn').style.display = isAdmin ? 'inline-block' : 'none';
-        filterScripts();
-        renderExecutors();
-    }
+        });
 
-    function toggleUserDropdown() {
-        const dd = document.getElementById('userDropdown');
-        const open = dd.classList.toggle('open');
-        document.getElementById('userChipBtn').setAttribute('aria-expanded', open ? 'true' : 'false');
-    }
-    function closeUserDropdown() {
-        document.getElementById('userDropdown').classList.remove('open');
-        document.getElementById('userChipBtn').setAttribute('aria-expanded', 'false');
-    }
+        // Fecha o menu do usuário se clicar fora dele
+        document.addEventListener('click', (e) => {
+            const menu = document.getElementById('userMenu');
+            if (menu && !menu.contains(e.target)) closeUserDropdown();
+        });
 
-    function openAuthModal(mode) {
-        authMode = mode;
-        document.getElementById('authTitle').innerText = mode === 'login' ? 'Entrar na Conta' : 'Criar Nova Conta';
-        document.getElementById('authSubmitBtn').innerText = mode === 'login' ? 'Entrar' : 'Cadastrar';
-        document.getElementById('forgotPasswordLink').style.display = mode === 'login' ? 'block' : 'none';
-        document.getElementById('authModal').style.display = 'flex';
-        setTimeout(() => document.getElementById('authEmail').focus(), 50);
-    }
-
-    function closeAuthModal() {
-        document.getElementById('authModal').style.display = 'none';
-        document.getElementById('authEmail').value = '';
-        document.getElementById('authPassword').value = '';
-        document.getElementById('authEmail').classList.remove('input-error');
-        document.getElementById('authPassword').classList.remove('input-error');
-    }
-
-    async function handleAuth() {
-        const email = document.getElementById('authEmail').value.trim();
-        const password = document.getElementById('authPassword').value;
-        const emailInput = document.getElementById('authEmail');
-        const passInput = document.getElementById('authPassword');
-        emailInput.classList.remove('input-error');
-        passInput.classList.remove('input-error');
-
-        if (!email) { emailInput.classList.add('input-error'); return showToast('Digite seu e-mail.', 'warning'); }
-        if (!password) { passInput.classList.add('input-error'); return showToast('Digite sua senha.', 'warning'); }
-        if (authMode === 'register' && password.length < 6) {
-            passInput.classList.add('input-error');
-            return showToast('A senha precisa ter no mínimo 6 caracteres.', 'warning');
+        function navKeydown(e, currentSection) {
+            if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+            e.preventDefault();
+            const other = currentSection === 'scripts' ? 'executors' : 'scripts';
+            switchSection(other);
+            document.getElementById(other === 'scripts' ? 'navScriptsBtn' : 'navExecutorsBtn').focus();
         }
 
-        const btn = document.getElementById('authSubmitBtn');
-        if (btn.disabled) return; // evita duplo clique
-        const originalLabel = btn.innerText;
-        btn.disabled = true;
-        btn.innerHTML = '<span class="spinner"></span>';
+        /* ===================== AUTENTICAÇÃO ===================== */
+        async function checkUser() {
+            const {data: {session}} = await sb.auth.getSession();
+            currentUser = session ? session.user : null;
+            await refreshAdminStatus();
+            updateUI();
+        }
 
-        try {
-            let error;
-            if (authMode === 'register') {
-                ({ error } = await sb.auth.signUp({ email, password }));
-                if (!error) { showToast('Conta criada! Verifique seu e-mail se for solicitado.', 'success'); closeAuthModal(); }
-            } else {
-                ({ error } = await sb.auth.signInWithPassword({ email, password }));
-                if (!error) { showToast('Login realizado com sucesso!', 'success'); closeAuthModal(); }
+        sb.auth.onAuthStateChange(async (event, session) => {
+            currentUser = session ? session.user : null;
+            await refreshAdminStatus();
+            updateUI();
+        });
+
+        // Verifica no banco se a conta logada é admin (coluna is_admin em profiles).
+        // Isso é só para MOSTRAR/ESCONDER botões — a proteção de verdade contra
+        // usuários maliciosos está nas policies de RLS do Supabase (ver SQL em anexo).
+        async function refreshAdminStatus() {
+            if (!currentUser) {isAdmin = false; return;}
+            try {
+                const {data, error} = await sb.from('profiles').select('is_admin').eq('id', currentUser.id).single();
+                isAdmin = !error && data && data.is_admin === true;
+            } catch (e) {
+                isAdmin = false;
             }
-            if (error) showToast(translateAuthError(error.message), 'error');
-        } catch (e) {
-            showToast('Não foi possível conectar. Verifique sua internet.', 'error');
-        } finally {
-            btn.disabled = false;
-            btn.innerText = originalLabel;
-        }
-    }
-
-    async function handleForgotPassword() {
-        const email = document.getElementById('authEmail').value.trim();
-        if (!email) {
-            document.getElementById('authEmail').classList.add('input-error');
-            return showToast('Digite seu e-mail no campo acima primeiro.', 'warning');
-        }
-        try {
-            const { error } = await sb.auth.resetPasswordForEmail(email);
-            if (error) showToast(translateAuthError(error.message), 'error');
-            else showToast('Se esse e-mail existir, enviamos um link de recuperação.', 'success');
-        } catch (e) {
-            showToast('Não foi possível enviar o e-mail agora.', 'error');
-        }
-    }
-
-    async function logout() {
-        closeUserDropdown();
-        await sb.auth.signOut();
-        showToast('Você saiu da sua conta.', 'info');
-    }
-
-    /* ===================== NAVEGAÇÃO PRINCIPAL ===================== */
-    function switchSection(section) {
-        const scriptsBtn = document.getElementById('navScriptsBtn');
-        const execBtn = document.getElementById('navExecutorsBtn');
-        const scriptsSection = document.getElementById('scriptsSection');
-        const execSection = document.getElementById('executorsSection');
-        const goExec = section === 'executors';
-
-        scriptsSection.style.display = goExec ? 'none' : 'block';
-        execSection.style.display = goExec ? 'block' : 'none';
-        scriptsBtn.classList.toggle('active', !goExec);
-        execBtn.classList.toggle('active', goExec);
-        scriptsBtn.setAttribute('aria-selected', String(!goExec));
-        execBtn.setAttribute('aria-selected', String(goExec));
-    }
-
-    /* ===================== BUSCA ===================== */
-    function onSearchInput() {
-        const val = document.getElementById('searchInput').value;
-        document.getElementById('searchClearBtn').style.display = val ? 'flex' : 'none';
-        clearTimeout(searchDebounceTimer);
-        searchDebounceTimer = setTimeout(filterScripts, 180);
-    }
-    function clearSearch() {
-        document.getElementById('searchInput').value = '';
-        document.getElementById('searchClearBtn').style.display = 'none';
-        filterScripts();
-        document.getElementById('searchInput').focus();
-    }
-
-    function setCategory(cat) {
-        currentCategory = cat;
-        document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.cat === cat));
-        filterScripts();
-    }
-
-    function renderCategoryTabs() {
-        const box = document.getElementById('categoryTabs');
-        const all = [{ id: 'Todos', icon: '&#x1F4C2;' }, ...GAMES];
-        box.innerHTML = all.map(g =>
-            `<button type="button" class="tab ${g.id === currentCategory ? 'active' : ''}" data-cat="${escapeHtml(g.id)}" onclick="setCategory('${g.id.replace(/'/g, "\\'")}')">${g.icon} ${escapeHtml(g.id)}</button>`
-        ).join('');
-    }
-
-    function renderGameSelectOptions() {
-        const sel = document.getElementById('scriptGame');
-        sel.innerHTML = GAMES.map(g => `<option value="${escapeHtml(g.id)}">${g.icon} ${escapeHtml(g.id)}</option>`).join('');
-    }
-
-    /* ===================== SCRIPTS (banco) ===================== */
-    async function fetchScripts() {
-        const { data, error } = await sb.from('scripts').select('*').order('id', { ascending: false });
-
-        if (error) {
-            console.error('Erro ao buscar scripts:', error);
-            document.getElementById('contentArea').innerHTML = `<div class="empty-state"><div class="empty-icon">&#x1F4E1;</div>Não foi possível carregar os scripts. Tente novamente.</div>`;
-            return;
         }
 
-        scriptsData = data || [];
-        await loadAuthorsFor(scriptsData);
-        filterScripts();
-    }
-
-    // Busca o e-mail de quem postou cada script (pra mostrar "autor"),
-    // usando cache pra não repetir consultas.
-    async function loadAuthorsFor(list) {
-        const ids = [...new Set(list.map(s => s.user_id).filter(id => id && !profilesById[id]))];
-        if (ids.length === 0) return;
-        try {
-            const { data, error } = await sb.from('profiles').select('id, email').in('id', ids);
-            if (!error && data) data.forEach(p => { profilesById[p.id] = p; });
-        } catch (e) { /* autor fica "Anônimo" se não der pra carregar */ }
-    }
-
-    async function saveScript() {
-        if (!currentUser) return showToast('Você precisa criar conta e entrar para postar scripts!', 'warning');
-
-        const nameInput = document.getElementById('scriptName');
-        const codeInput = document.getElementById('scriptCode');
-        const name = nameInput.value.trim();
-        const game = document.getElementById('scriptGame').value;
-        const code = codeInput.value;
-
-        nameInput.classList.remove('input-error');
-        codeInput.classList.remove('input-error');
-        if (!name) { nameInput.classList.add('input-error'); return showToast('Preencha o nome do script.', 'warning'); }
-        if (!code.trim()) { codeInput.classList.add('input-error'); return showToast('Cole o código do script.', 'warning'); }
-
-        const btn = document.getElementById('saveScriptBtn');
-        if (btn.disabled) return;
-        const label = document.getElementById('saveScriptBtnLabel');
-        const originalLabel = label.textContent;
-        btn.disabled = true;
-        btn.innerHTML = '<span class="spinner"></span> <span>Salvando...</span>';
-
-        try {
-            let error;
-            if (editingScriptId) {
-                ({ error } = await sb.from('scripts').update({ name, game, code }).eq('id', editingScriptId));
+        function updateUI() {
+            if (currentUser) {
+                document.getElementById('guestActions').style.display = 'none';
+                document.getElementById('userActions').style.display = 'flex';
+                const email = currentUser.email || '';
+                document.getElementById('userEmailDisplay').innerHTML = escapeHtml(email) + (isAdmin ? ' <span class="admin-badge">&#x1F451; ADMIN</span>' : '');
+                document.getElementById('userAvatar').textContent = email.charAt(0).toUpperCase() || '?';
+                document.getElementById('postScriptBtn').style.display = 'inline-block';
             } else {
-                ({ error } = await sb.from('scripts').insert([{ name, game, code, user_id: currentUser.id }]));
+                document.getElementById('guestActions').style.display = 'flex';
+                document.getElementById('userActions').style.display = 'none';
+                closeUserDropdown();
             }
+            document.getElementById('addExecutorBtn').style.display = isAdmin ? 'inline-block' : 'none';
+            filterScripts();
+            renderExecutors();
+        }
+
+        function toggleUserDropdown() {
+            const dd = document.getElementById('userDropdown');
+            const open = dd.classList.toggle('open');
+            document.getElementById('userChipBtn').setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        function closeUserDropdown() {
+            document.getElementById('userDropdown').classList.remove('open');
+            document.getElementById('userChipBtn').setAttribute('aria-expanded', 'false');
+        }
+
+        function openAuthModal(mode) {
+            authMode = mode;
+            document.getElementById('authTitle').innerText = mode === 'login' ? 'Entrar na Conta' : 'Criar Nova Conta';
+            document.getElementById('authSubmitBtn').innerText = mode === 'login' ? 'Entrar' : 'Cadastrar';
+            document.getElementById('forgotPasswordLink').style.display = mode === 'login' ? 'block' : 'none';
+            document.getElementById('authModal').style.display = 'flex';
+            setTimeout(() => document.getElementById('authEmail').focus(), 50);
+        }
+
+        function closeAuthModal() {
+            document.getElementById('authModal').style.display = 'none';
+            document.getElementById('authEmail').value = '';
+            document.getElementById('authPassword').value = '';
+            document.getElementById('authEmail').classList.remove('input-error');
+            document.getElementById('authPassword').classList.remove('input-error');
+        }
+
+        async function handleAuth() {
+            const email = document.getElementById('authEmail').value.trim();
+            const password = document.getElementById('authPassword').value;
+            const emailInput = document.getElementById('authEmail');
+            const passInput = document.getElementById('authPassword');
+            emailInput.classList.remove('input-error');
+            passInput.classList.remove('input-error');
+
+            if (!email) {emailInput.classList.add('input-error'); return showToast('Digite seu e-mail.', 'warning');}
+            if (!password) {passInput.classList.add('input-error'); return showToast('Digite sua senha.', 'warning');}
+            if (authMode === 'register' && password.length < 6) {
+                passInput.classList.add('input-error');
+                return showToast('A senha precisa ter no mínimo 6 caracteres.', 'warning');
+            }
+
+            const btn = document.getElementById('authSubmitBtn');
+            if (btn.disabled) return; // evita duplo clique
+            const originalLabel = btn.innerText;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span>';
+
+            try {
+                let error;
+                if (authMode === 'register') {
+                    ({error} = await sb.auth.signUp({email, password}));
+                    if (!error) {showToast('Conta criada! Verifique seu e-mail se for solicitado.', 'success'); closeAuthModal();}
+                } else {
+                    ({error} = await sb.auth.signInWithPassword({email, password}));
+                    if (!error) {showToast('Login realizado com sucesso!', 'success'); closeAuthModal();}
+                }
+                if (error) showToast(translateAuthError(error.message), 'error');
+            } catch (e) {
+                showToast('Não foi possível conectar. Verifique sua internet.', 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerText = originalLabel;
+            }
+        }
+
+        async function handleForgotPassword() {
+            const email = document.getElementById('authEmail').value.trim();
+            if (!email) {
+                document.getElementById('authEmail').classList.add('input-error');
+                return showToast('Digite seu e-mail no campo acima primeiro.', 'warning');
+            }
+            try {
+                const {error} = await sb.auth.resetPasswordForEmail(email);
+                if (error) showToast(translateAuthError(error.message), 'error');
+                else showToast('Se esse e-mail existir, enviamos um link de recuperação.', 'success');
+            } catch (e) {
+                showToast('Não foi possível enviar o e-mail agora.', 'error');
+            }
+        }
+
+        async function logout() {
+            closeUserDropdown();
+            await sb.auth.signOut();
+            showToast('Você saiu da sua conta.', 'info');
+        }
+
+        /* ===================== NAVEGAÇÃO PRINCIPAL ===================== */
+        function switchSection(section) {
+            const scriptsBtn = document.getElementById('navScriptsBtn');
+            const execBtn = document.getElementById('navExecutorsBtn');
+            const scriptsSection = document.getElementById('scriptsSection');
+            const execSection = document.getElementById('executorsSection');
+            const goExec = section === 'executors';
+
+            scriptsSection.style.display = goExec ? 'none' : 'block';
+            execSection.style.display = goExec ? 'block' : 'none';
+            scriptsBtn.classList.toggle('active', !goExec);
+            execBtn.classList.toggle('active', goExec);
+            scriptsBtn.setAttribute('aria-selected', String(!goExec));
+            execBtn.setAttribute('aria-selected', String(goExec));
+        }
+
+        /* ===================== BUSCA ===================== */
+        function onSearchInput() {
+            const val = document.getElementById('searchInput').value;
+            document.getElementById('searchClearBtn').style.display = val ? 'flex' : 'none';
+            clearTimeout(searchDebounceTimer);
+            searchDebounceTimer = setTimeout(filterScripts, 180);
+        }
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchClearBtn').style.display = 'none';
+            filterScripts();
+            document.getElementById('searchInput').focus();
+        }
+
+        function setCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.cat === cat));
+            filterScripts();
+        }
+
+        function renderCategoryTabs() {
+            const box = document.getElementById('categoryTabs');
+            const all = [{id: 'Todos', icon: '&#x1F4C2;'}, ...GAMES];
+            box.innerHTML = all.map(g =>
+                `<button type="button" class="tab ${g.id === currentCategory ? 'active' : ''}" data-cat="${escapeHtml(g.id)}" onclick="setCategory('${g.id.replace(/'/g, "\\'")}')">${g.icon} ${escapeHtml(g.id)}</button>`
+            ).join('');
+        }
+
+        function renderGameSelectOptions() {
+            const sel = document.getElementById('scriptGame');
+            sel.innerHTML = GAMES.map(g => `<option value="${escapeHtml(g.id)}">${g.icon} ${escapeHtml(g.id)}</option>`).join('');
+        }
+
+        /* ===================== SCRIPTS (banco) ===================== */
+        async function fetchScripts() {
+            const {data, error} = await sb.from('scripts').select('*').order('id', {ascending: false});
 
             if (error) {
-                console.error(error);
-                showToast(error.code === '42501' ? 'Você não tem permissão para essa ação.' : friendlyDbError('Erro ao salvar o script.'), 'error');
-            } else {
-                closeScriptModal();
-                showToast(editingScriptId ? 'Script atualizado!' : 'Script salvo com sucesso!', 'success');
-                fetchScripts();
+                console.error('Erro ao buscar scripts:', error);
+                document.getElementById('contentArea').innerHTML = `<div class="empty-state"><div class="empty-icon">&#x1F4E1;</div>Não foi possível carregar os scripts. Tente novamente.</div>`;
+                return;
             }
-        } catch (e) {
-            showToast(friendlyDbError(), 'error');
-        } finally {
-            btn.disabled = false;
-            btn.innerHTML = `<span id="saveScriptBtnLabel">${originalLabel}</span>`;
+
+            scriptsData = data || [];
+            await loadAuthorsFor(scriptsData);
+            filterScripts();
         }
-    }
 
-    async function deleteScript(id) {
-        if (!isAdmin) return showToast('Somente o administrador pode apagar scripts!', 'error');
-        if (!confirm('Tem certeza que deseja apagar permanentemente da nuvem?')) return;
+        // Busca o e-mail de quem postou cada script (pra mostrar "autor"),
+        // usando cache pra não repetir consultas.
+        async function loadAuthorsFor(list) {
+            const ids = [...new Set(list.map(s => s.user_id).filter(id => id && !profilesById[id]))];
+            if (ids.length === 0) return;
+            try {
+                const {data, error} = await sb.from('profiles').select('id, email').in('id', ids);
+                if (!error && data) data.forEach(p => {profilesById[p.id] = p;});
+            } catch (e) { /* autor fica "Anônimo" se não der pra carregar */}
+        }
 
-        const { error } = await sb.from('scripts').delete().eq('id', id);
-        if (!error) { fetchScripts(); showToast('Script apagado.', 'success'); }
-        else showToast(friendlyDbError('Erro ao apagar o script.'), 'error');
-    }
+        async function saveScript() {
+            if (!currentUser) return showToast('Você precisa criar conta e entrar para postar scripts!', 'warning');
 
-    function openScriptModal(id) {
-        if (!currentUser) return showToast('Crie uma conta ou faça login primeiro!', 'warning');
+            const nameInput = document.getElementById('scriptName');
+            const codeInput = document.getElementById('scriptCode');
+            const name = nameInput.value.trim();
+            const game = document.getElementById('scriptGame').value;
+            const code = codeInput.value;
 
-        const nameInput = document.getElementById('scriptName');
-        const gameSelect = document.getElementById('scriptGame');
-        const codeInput = document.getElementById('scriptCode');
-        nameInput.classList.remove('input-error');
-        codeInput.classList.remove('input-error');
+            nameInput.classList.remove('input-error');
+            codeInput.classList.remove('input-error');
+            if (!name) {nameInput.classList.add('input-error'); return showToast('Preencha o nome do script.', 'warning');}
+            if (!code.trim()) {codeInput.classList.add('input-error'); return showToast('Cole o código do script.', 'warning');}
 
-        if (id) {
-            const s = scriptsData.find(x => x.id === id);
-            if (!s) return;
-            if (s.user_id !== currentUser.id && !isAdmin) return showToast('Você só pode editar seus próprios scripts.', 'error');
-            editingScriptId = id;
-            document.getElementById('scriptModalTitle').textContent = 'Editar Script';
-            document.getElementById('saveScriptBtnLabel').textContent = 'Salvar Alterações';
-            nameInput.value = s.name;
-            gameSelect.value = s.game;
-            codeInput.value = s.code;
-        } else {
+            const btn = document.getElementById('saveScriptBtn');
+            if (btn.disabled) return;
+            const label = document.getElementById('saveScriptBtnLabel');
+            const originalLabel = label.textContent;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> <span>Salvando...</span>';
+
+            try {
+                let error;
+                if (editingScriptId) {
+                    ({error} = await sb.from('scripts').update({name, game, code}).eq('id', editingScriptId));
+                } else {
+                    ({error} = await sb.from('scripts').insert([{name, game, code, user_id: currentUser.id}]));
+                }
+
+                if (error) {
+                    console.error(error);
+                    showToast(error.code === '42501' ? 'Você não tem permissão para essa ação.' : friendlyDbError('Erro ao salvar o script.'), 'error');
+                } else {
+                    closeScriptModal();
+                    showToast(editingScriptId ? 'Script atualizado!' : 'Script salvo com sucesso!', 'success');
+                    fetchScripts();
+                }
+            } catch (e) {
+                showToast(friendlyDbError(), 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<span id="saveScriptBtnLabel">${originalLabel}</span>`;
+            }
+        }
+
+        async function deleteScript(id) {
+            if (!isAdmin) return showToast('Somente o administrador pode apagar scripts!', 'error');
+            if (!confirm('Tem certeza que deseja apagar permanentemente da nuvem?')) return;
+
+            const {error} = await sb.from('scripts').delete().eq('id', id);
+            if (!error) {fetchScripts(); showToast('Script apagado.', 'success');}
+            else showToast(friendlyDbError('Erro ao apagar o script.'), 'error');
+        }
+
+        function openScriptModal(id) {
+            if (!currentUser) return showToast('Crie uma conta ou faça login primeiro!', 'warning');
+
+            const nameInput = document.getElementById('scriptName');
+            const gameSelect = document.getElementById('scriptGame');
+            const codeInput = document.getElementById('scriptCode');
+            nameInput.classList.remove('input-error');
+            codeInput.classList.remove('input-error');
+
+            if (id) {
+                const s = scriptsData.find(x => x.id === id);
+                if (!s) return;
+                if (s.user_id !== currentUser.id && !isAdmin) return showToast('Você só pode editar seus próprios scripts.', 'error');
+                editingScriptId = id;
+                document.getElementById('scriptModalTitle').textContent = 'Editar Script';
+                document.getElementById('saveScriptBtnLabel').textContent = 'Salvar Alterações';
+                nameInput.value = s.name;
+                gameSelect.value = s.game;
+                codeInput.value = s.code;
+            } else {
+                editingScriptId = null;
+                document.getElementById('scriptModalTitle').textContent = 'Adicionar Novo Script';
+                document.getElementById('saveScriptBtnLabel').textContent = 'Salvar na Nuvem';
+                nameInput.value = '';
+                gameSelect.value = GAMES[0].id;
+                codeInput.value = '';
+            }
+
+            document.getElementById('scriptModal').style.display = 'flex';
+            setTimeout(() => nameInput.focus(), 50);
+        }
+
+        function closeScriptModal() {
+            document.getElementById('scriptModal').style.display = 'none';
             editingScriptId = null;
-            document.getElementById('scriptModalTitle').textContent = 'Adicionar Novo Script';
-            document.getElementById('saveScriptBtnLabel').textContent = 'Salvar na Nuvem';
-            nameInput.value = '';
-            gameSelect.value = GAMES[0].id;
-            codeInput.value = '';
         }
 
-        document.getElementById('scriptModal').style.display = 'flex';
-        setTimeout(() => nameInput.focus(), 50);
-    }
+        // Copia o código do script com Clipboard API, com fallback e feedback visual.
+        async function copyScript(btn, scriptId) {
+            const s = scriptsData.find(x => x.id === scriptId);
+            if (!s) return;
+            const code = s.code;
 
-    function closeScriptModal() {
-        document.getElementById('scriptModal').style.display = 'none';
-        editingScriptId = null;
-    }
-
-    // Copia o código do script com Clipboard API, com fallback e feedback visual.
-    async function copyScript(btn, scriptId) {
-        const s = scriptsData.find(x => x.id === scriptId);
-        if (!s) return;
-        const code = s.code;
-
-        try {
-            if (navigator.clipboard && window.isSecureContext) {
-                await navigator.clipboard.writeText(code);
-            } else {
-                // Fallback para navegadores/sites sem permissão de Clipboard API
-                const ta = document.createElement('textarea');
-                ta.value = code;
-                ta.style.position = 'fixed';
-                ta.style.opacity = '0';
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand('copy');
-                document.body.removeChild(ta);
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(code);
+                } else {
+                    // Fallback para navegadores/sites sem permissão de Clipboard API
+                    const ta = document.createElement('textarea');
+                    ta.value = code;
+                    ta.style.position = 'fixed';
+                    ta.style.opacity = '0';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                }
+                markCopyFeedback(btn, true);
+                showToast('&#x2713; Script copiado!', 'success');
+                incrementCopyCount(scriptId);
+            } catch (e) {
+                markCopyFeedback(btn, false);
+                showToast('Não foi possível copiar automaticamente. Copie manualmente.', 'warning');
             }
-            markCopyFeedback(btn, true);
-            showToast('&#x2713; Script copiado!', 'success');
-            incrementCopyCount(scriptId);
-        } catch (e) {
-            markCopyFeedback(btn, false);
-            showToast('Não foi possível copiar automaticamente. Copie manualmente.', 'warning');
-        }
-    }
-
-    function markCopyFeedback(btn, ok) {
-        const original = btn.innerHTML;
-        btn.innerHTML = ok ? '&#x2713; Copiado!' : '&#x2715; Falhou';
-        btn.style.borderColor = ok ? 'var(--success)' : 'var(--danger)';
-        btn.style.color = ok ? 'var(--success)' : 'var(--danger)';
-        setTimeout(() => {
-            btn.innerHTML = original;
-            btn.style.borderColor = '';
-            btn.style.color = '';
-        }, 1800);
-    }
-
-    // Contador REAL de cópias (não é um número inventado). Usa uma função no
-    // banco (increment_copy_count) que só faz essa soma — ver SQL em anexo.
-    async function incrementCopyCount(scriptId) {
-        try {
-            const { error } = await sb.rpc('increment_copy_count', { p_script_id: scriptId });
-            if (!error) {
-                const s = scriptsData.find(x => x.id === scriptId);
-                if (s) s.copy_count = (s.copy_count || 0) + 1;
-                const badge = document.querySelector(`[data-copy-count="${scriptId}"]`);
-                if (badge && s) badge.innerHTML = `&#x1F525; ${s.copy_count} cópias`;
-            }
-        } catch (e) { /* contador é um extra visual — falha aqui não deve travar a cópia */ }
-    }
-
-    function filterScripts() {
-        const search = document.getElementById('searchInput').value.trim().toLowerCase();
-        const area = document.getElementById('contentArea');
-
-        const filtered = scriptsData.filter(s => {
-            const matchesSearch = !search || s.name.toLowerCase().includes(search) || s.game.toLowerCase().includes(search);
-            const matchesCat = currentCategory === 'Todos' || s.game === currentCategory;
-            return matchesSearch && matchesCat;
-        });
-
-        if (filtered.length === 0) {
-            if (scriptsData.length === 0) {
-                area.innerHTML = `<div class="empty-state"><div class="empty-icon">&#x1F4C2;</div><h3 style="margin-bottom:8px;">Nenhum script cadastrado ainda</h3><p>Faça login e seja o primeiro a postar!</p></div>`;
-            } else {
-                area.innerHTML = `<div class="empty-state"><div class="empty-icon">&#x1F50D;</div><h3 style="margin-bottom:8px;">Nenhum resultado encontrado</h3><p>Tente outro termo de busca ou categoria.</p></div>`;
-            }
-            return;
         }
 
-        let html = '<div class="script-list">';
-        filtered.forEach((s, i) => {
-            const showEdit = currentUser && (isAdmin || s.user_id === currentUser.id);
-            const showDelete = isAdmin;
-            const author = s.user_id && profilesById[s.user_id] ? profilesById[s.user_id].email : 'Anônimo';
-            const copyCount = typeof s.copy_count === 'number' ? s.copy_count : null;
+        function markCopyFeedback(btn, ok) {
+            const original = btn.innerHTML;
+            btn.innerHTML = ok ? '&#x2713; Copiado!' : '&#x2715; Falhou';
+            btn.style.borderColor = ok ? 'var(--success)' : 'var(--danger)';
+            btn.style.color = ok ? 'var(--success)' : 'var(--danger)';
+            setTimeout(() => {
+                btn.innerHTML = original;
+                btn.style.borderColor = '';
+                btn.style.color = '';
+            }, 1800);
+        }
 
-            html += `
+        // Contador REAL de cópias (não é um número inventado). Usa uma função no
+        // banco (increment_copy_count) que só faz essa soma — ver SQL em anexo.
+        async function incrementCopyCount(scriptId) {
+            try {
+                const {error} = await sb.rpc('increment_copy_count', {p_script_id: scriptId});
+                if (!error) {
+                    const s = scriptsData.find(x => x.id === scriptId);
+                    if (s) s.copy_count = (s.copy_count || 0) + 1;
+                    const badge = document.querySelector(`[data-copy-count="${scriptId}"]`);
+                    if (badge && s) badge.innerHTML = `&#x1F525; ${s.copy_count} cópias`;
+                }
+            } catch (e) { /* contador é um extra visual — falha aqui não deve travar a cópia */}
+        }
+
+        function filterScripts() {
+            const search = document.getElementById('searchInput').value.trim().toLowerCase();
+            const area = document.getElementById('contentArea');
+
+            const filtered = scriptsData.filter(s => {
+                const matchesSearch = !search || s.name.toLowerCase().includes(search) || s.game.toLowerCase().includes(search);
+                const matchesCat = currentCategory === 'Todos' || s.game === currentCategory;
+                return matchesSearch && matchesCat;
+            });
+
+            if (filtered.length === 0) {
+                if (scriptsData.length === 0) {
+                    area.innerHTML = `<div class="empty-state"><div class="empty-icon">&#x1F4C2;</div><h3 style="margin-bottom:8px;">Nenhum script cadastrado ainda</h3><p>Faça login e seja o primeiro a postar!</p></div>`;
+                } else {
+                    area.innerHTML = `<div class="empty-state"><div class="empty-icon">&#x1F50D;</div><h3 style="margin-bottom:8px;">Nenhum resultado encontrado</h3><p>Tente outro termo de busca ou categoria.</p></div>`;
+                }
+                return;
+            }
+
+            let html = '<div class="script-list">';
+            filtered.forEach((s, i) => {
+                const showEdit = currentUser && (isAdmin || s.user_id === currentUser.id);
+                const showDelete = isAdmin;
+                const author = s.user_id && profilesById[s.user_id] ? profilesById[s.user_id].email : 'Anônimo';
+                const copyCount = typeof s.copy_count === 'number' ? s.copy_count : null;
+
+                html += `
                 <div class="script-card" style="animation-delay:${Math.min(i, 10) * 0.04}s">
                     <div class="script-info">
                         <div class="script-icon">${gameIcon(s.game)}</div>
@@ -1142,36 +1983,36 @@
                     </div>
                 </div>
             `;
-        });
-        html += '</div>';
-        area.innerHTML = html;
-    }
-
-    /* ===================== EXECUTORES OFICIAIS ===================== */
-    async function fetchExecutors() {
-        const { data, error } = await sb.from('executors').select('*').order('created_at', { ascending: false });
-        if (error) {
-            console.error('Erro ao buscar executores:', error);
-            document.getElementById('executorsArea').innerHTML = `<div class="empty-state">Não foi possível carregar os executores.</div>`;
-            return;
-        }
-        executorsData = data || [];
-        renderExecutors();
-    }
-
-    function renderExecutors() {
-        const area = document.getElementById('executorsArea');
-        if (executorsData.length === 0) {
-            area.innerHTML = `<div class="empty-state" style="padding:60px 20px;"><div class="empty-icon">&#x1F6E1;&#xFE0F;</div>Nenhum executor cadastrado ainda.</div>`;
-            return;
+            });
+            html += '</div>';
+            area.innerHTML = html;
         }
 
-        let html = '<div class="executor-list">';
-        executorsData.forEach((ex, i) => {
-            const iconHtml = ex.image_url
-                ? `<img src="${escapeHtml(ex.image_url)}" alt="Logo ${escapeHtml(ex.name)}" loading="lazy" onerror="this.parentElement.innerHTML='&#x1F6E1;&#xFE0F;';">`
-                : '&#x1F6E1;&#xFE0F;';
-            html += `
+        /* ===================== EXECUTORES OFICIAIS ===================== */
+        async function fetchExecutors() {
+            const {data, error} = await sb.from('executors').select('*').order('created_at', {ascending: false});
+            if (error) {
+                console.error('Erro ao buscar executores:', error);
+                document.getElementById('executorsArea').innerHTML = `<div class="empty-state">Não foi possível carregar os executores.</div>`;
+                return;
+            }
+            executorsData = data || [];
+            renderExecutors();
+        }
+
+        function renderExecutors() {
+            const area = document.getElementById('executorsArea');
+            if (executorsData.length === 0) {
+                area.innerHTML = `<div class="empty-state" style="padding:60px 20px;"><div class="empty-icon">&#x1F6E1;&#xFE0F;</div>Nenhum executor cadastrado ainda.</div>`;
+                return;
+            }
+
+            let html = '<div class="executor-list">';
+            executorsData.forEach((ex, i) => {
+                const iconHtml = ex.image_url
+                    ? `<img src="${escapeHtml(ex.image_url)}" alt="Logo ${escapeHtml(ex.name)}" loading="lazy" onerror="this.parentElement.innerHTML='&#x1F6E1;&#xFE0F;';">`
+                    : '&#x1F6E1;&#xFE0F;';
+                html += `
                 <div class="executor-card" style="animation-delay:${Math.min(i, 10) * 0.05}s">
                     <div class="executor-info">
                         <div class="executor-icon">${iconHtml}</div>
@@ -1187,273 +2028,274 @@
                     </div>
                 </div>
             `;
-        });
-        html += '</div>';
-        area.innerHTML = html;
-    }
+            });
+            html += '</div>';
+            area.innerHTML = html;
+        }
 
-    function openExecutorModal(id) {
-        if (!isAdmin) return showToast('Só o administrador pode adicionar executores.', 'error');
+        function openExecutorModal(id) {
+            if (!isAdmin) return showToast('Só o administrador pode adicionar executores.', 'error');
 
-        const nameInput = document.getElementById('executorName');
-        const urlInput = document.getElementById('executorUrl');
-        const imageInput = document.getElementById('executorImageUrl');
-        const descInput = document.getElementById('executorDesc');
+            const nameInput = document.getElementById('executorName');
+            const urlInput = document.getElementById('executorUrl');
+            const imageInput = document.getElementById('executorImageUrl');
+            const descInput = document.getElementById('executorDesc');
 
-        if (id) {
-            const ex = executorsData.find(x => x.id === id);
-            if (!ex) return;
-            editingExecutorId = id;
-            document.getElementById('executorModalTitle').textContent = 'Editar Executor';
-            document.getElementById('saveExecutorBtnLabel').textContent = 'Salvar Alterações';
-            nameInput.value = ex.name;
-            urlInput.value = ex.url;
-            imageInput.value = ex.image_url || '';
-            descInput.value = ex.description || '';
-        } else {
+            if (id) {
+                const ex = executorsData.find(x => x.id === id);
+                if (!ex) return;
+                editingExecutorId = id;
+                document.getElementById('executorModalTitle').textContent = 'Editar Executor';
+                document.getElementById('saveExecutorBtnLabel').textContent = 'Salvar Alterações';
+                nameInput.value = ex.name;
+                urlInput.value = ex.url;
+                imageInput.value = ex.image_url || '';
+                descInput.value = ex.description || '';
+            } else {
+                editingExecutorId = null;
+                document.getElementById('executorModalTitle').textContent = 'Adicionar Executor Oficial';
+                document.getElementById('saveExecutorBtnLabel').textContent = 'Salvar Executor';
+                nameInput.value = '';
+                urlInput.value = '';
+                imageInput.value = '';
+                descInput.value = '';
+            }
+            document.getElementById('executorModal').style.display = 'flex';
+            setTimeout(() => nameInput.focus(), 50);
+        }
+
+        function closeExecutorModal() {
+            document.getElementById('executorModal').style.display = 'none';
             editingExecutorId = null;
-            document.getElementById('executorModalTitle').textContent = 'Adicionar Executor Oficial';
-            document.getElementById('saveExecutorBtnLabel').textContent = 'Salvar Executor';
-            nameInput.value = '';
-            urlInput.value = '';
-            imageInput.value = '';
-            descInput.value = '';
         }
-        document.getElementById('executorModal').style.display = 'flex';
-        setTimeout(() => nameInput.focus(), 50);
-    }
 
-    function closeExecutorModal() {
-        document.getElementById('executorModal').style.display = 'none';
-        editingExecutorId = null;
-    }
+        async function saveExecutor() {
+            if (!isAdmin) return showToast('Só o administrador pode adicionar executores.', 'error');
 
-    async function saveExecutor() {
-        if (!isAdmin) return showToast('Só o administrador pode adicionar executores.', 'error');
+            const nameInput = document.getElementById('executorName');
+            const urlInput = document.getElementById('executorUrl');
+            const imageInput = document.getElementById('executorImageUrl');
+            const descInput = document.getElementById('executorDesc');
+            const name = nameInput.value.trim();
+            const url = urlInput.value.trim();
+            const image_url = imageInput.value.trim();
+            const description = descInput.value.trim();
 
-        const nameInput = document.getElementById('executorName');
-        const urlInput = document.getElementById('executorUrl');
-        const imageInput = document.getElementById('executorImageUrl');
-        const descInput = document.getElementById('executorDesc');
-        const name = nameInput.value.trim();
-        const url = urlInput.value.trim();
-        const image_url = imageInput.value.trim();
-        const description = descInput.value.trim();
+            nameInput.classList.remove('input-error');
+            urlInput.classList.remove('input-error');
+            if (!name) {nameInput.classList.add('input-error'); return showToast('Preencha o nome do executor.', 'warning');}
+            if (!url) {urlInput.classList.add('input-error'); return showToast('Preencha o link do executor.', 'warning');}
 
-        nameInput.classList.remove('input-error');
-        urlInput.classList.remove('input-error');
-        if (!name) { nameInput.classList.add('input-error'); return showToast('Preencha o nome do executor.', 'warning'); }
-        if (!url) { urlInput.classList.add('input-error'); return showToast('Preencha o link do executor.', 'warning'); }
+            const btn = document.getElementById('saveExecutorBtn');
+            if (btn.disabled) return;
+            const label = document.getElementById('saveExecutorBtnLabel');
+            const originalLabel = label.textContent;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> <span>Salvando...</span>';
 
-        const btn = document.getElementById('saveExecutorBtn');
-        if (btn.disabled) return;
-        const label = document.getElementById('saveExecutorBtnLabel');
-        const originalLabel = label.textContent;
-        btn.disabled = true;
-        btn.innerHTML = '<span class="spinner"></span> <span>Salvando...</span>';
+            try {
+                let error;
+                if (editingExecutorId) {
+                    ({error} = await sb.from('executors').update({name, url, image_url, description}).eq('id', editingExecutorId));
+                } else {
+                    ({error} = await sb.from('executors').insert([{name, url, image_url, description}]));
+                }
 
-        try {
-            let error;
-            if (editingExecutorId) {
-                ({ error } = await sb.from('executors').update({ name, url, image_url, description }).eq('id', editingExecutorId));
-            } else {
-                ({ error } = await sb.from('executors').insert([{ name, url, image_url, description }]));
+                if (error) {
+                    console.error(error);
+                    showToast(error.code === '42501' ? 'Você não tem permissão para essa ação.' : friendlyDbError('Erro ao salvar executor.'), 'error');
+                } else {
+                    closeExecutorModal();
+                    showToast(editingExecutorId ? 'Executor atualizado!' : 'Executor adicionado!', 'success');
+                    fetchExecutors();
+                }
+            } catch (e) {
+                showToast(friendlyDbError(), 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<span id="saveExecutorBtnLabel">${originalLabel}</span>`;
             }
-
-            if (error) {
-                console.error(error);
-                showToast(error.code === '42501' ? 'Você não tem permissão para essa ação.' : friendlyDbError('Erro ao salvar executor.'), 'error');
-            } else {
-                closeExecutorModal();
-                showToast(editingExecutorId ? 'Executor atualizado!' : 'Executor adicionado!', 'success');
-                fetchExecutors();
-            }
-        } catch (e) {
-            showToast(friendlyDbError(), 'error');
-        } finally {
-            btn.disabled = false;
-            btn.innerHTML = `<span id="saveExecutorBtnLabel">${originalLabel}</span>`;
         }
-    }
 
-    async function deleteExecutor(id) {
-        if (!isAdmin) return showToast('Só o administrador pode apagar executores.', 'error');
-        if (!confirm('Apagar esse executor da lista?')) return;
+        async function deleteExecutor(id) {
+            if (!isAdmin) return showToast('Só o administrador pode apagar executores.', 'error');
+            if (!confirm('Apagar esse executor da lista?')) return;
 
-        const { error } = await sb.from('executors').delete().eq('id', id);
-        if (!error) { fetchExecutors(); showToast('Executor apagado.', 'success'); }
-        else showToast(friendlyDbError('Erro ao apagar.'), 'error');
-    }
+            const {error} = await sb.from('executors').delete().eq('id', id);
+            if (!error) {fetchExecutors(); showToast('Executor apagado.', 'success');}
+            else showToast(friendlyDbError('Erro ao apagar.'), 'error');
+        }
 
-    /* ===================== PERFIL ===================== */
-    function openProfileModal() {
-        if (!currentUser) return;
-        document.getElementById('profileEmailLine').textContent = currentUser.email;
-        const memberSince = currentUser.created_at ? new Date(currentUser.created_at).toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' }) : '—';
-        document.getElementById('profileMemberSince').textContent = memberSince;
+        /* ===================== PERFIL ===================== */
+        function openProfileModal() {
+            if (!currentUser) return;
+            document.getElementById('profileEmailLine').textContent = currentUser.email;
+            const memberSince = currentUser.created_at ? new Date(currentUser.created_at).toLocaleDateString('pt-BR', {month: 'short', year: 'numeric'}) : '—';
+            document.getElementById('profileMemberSince').textContent = memberSince;
 
-        const own = scriptsData.filter(s => s.user_id === currentUser.id);
-        document.getElementById('profileScriptCount').textContent = own.length;
+            const own = scriptsData.filter(s => s.user_id === currentUser.id);
+            document.getElementById('profileScriptCount').textContent = own.length;
 
-        const listEl = document.getElementById('profileScriptsList');
-        if (own.length === 0) {
-            listEl.innerHTML = `<div style="color:var(--text-muted); font-size:13px; text-align:center; padding:16px 0;">Você ainda não postou nenhum script.</div>`;
-        } else {
-            listEl.innerHTML = own.map(s => `
+            const listEl = document.getElementById('profileScriptsList');
+            if (own.length === 0) {
+                listEl.innerHTML = `<div style="color:var(--text-muted); font-size:13px; text-align:center; padding:16px 0;">Você ainda não postou nenhum script.</div>`;
+            } else {
+                listEl.innerHTML = own.map(s => `
                 <div class="profile-script-item">
                     <span>${gameIcon(s.game)} ${escapeHtml(s.name)}</span>
                     <span style="color:var(--text-faint); font-size:11.5px;">${formatDate(s.created_at)}</span>
                 </div>
             `).join('');
-        }
-
-        closeUserDropdown();
-        document.getElementById('profileModal').style.display = 'flex';
-    }
-    function closeProfileModal() {
-        document.getElementById('profileModal').style.display = 'none';
-    }
-
-    /* ===================== INICIALIZAÇÃO ===================== */
-    document.getElementById('footerYear').textContent = new Date().getFullYear();
-    renderCategoryTabs();
-    renderGameSelectOptions();
-    checkUser();
-    fetchScripts();
-    fetchExecutors();
-</script>
-
-<!-- Fundo animado low-poly (efeito visual, não interfere na funcionalidade do site) -->
-<script>
-(function () {
-    const canvas = document.getElementById('bg-canvas');
-    if (!canvas || !canvas.getContext) return;
-    const ctx = canvas.getContext('2d');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    let width, height, points = [], triangles = [];
-    const gap = 130; // espaçamento maior = menos triângulos = mais leve
-
-    function resize() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        canvas.width = width;
-        canvas.height = height;
-        initPoints();
-        if (reduceMotion) drawStatic();
-    }
-
-    function initPoints() {
-        points = [];
-        triangles = [];
-        const cols = Math.ceil(width / gap) + 2;
-        const rows = Math.ceil(height / gap) + 2;
-
-        for (let i = 0; i < cols; i++) {
-            for (let j = 0; j < rows; j++) {
-                points.push({
-                    x: i * gap - gap / 2 + (Math.random() - 0.5) * gap * 0.8,
-                    y: j * gap - gap / 2 + (Math.random() - 0.5) * gap * 0.8,
-                    baseX: i * gap - gap / 2,
-                    baseY: j * gap - gap / 2,
-                    vx: (Math.random() - 0.5) * 0.25,
-                    vy: (Math.random() - 0.5) * 0.25
-                });
             }
+
+            closeUserDropdown();
+            document.getElementById('profileModal').style.display = 'flex';
+        }
+        function closeProfileModal() {
+            document.getElementById('profileModal').style.display = 'none';
         }
 
-        for (let i = 0; i < cols - 1; i++) {
-            for (let j = 0; j < rows - 1; j++) {
-                const p1 = points[i * rows + j];
-                const p2 = points[(i + 1) * rows + j];
-                const p3 = points[i * rows + j + 1];
-                const p4 = points[(i + 1) * rows + j + 1];
-                if (Math.random() > 0.5) {
-                    triangles.push([p1, p2, p3]);
-                    triangles.push([p2, p4, p3]);
-                } else {
-                    triangles.push([p1, p2, p4]);
-                    triangles.push([p1, p4, p3]);
+        /* ===================== INICIALIZAÇÃO ===================== */
+        document.getElementById('footerYear').textContent = new Date().getFullYear();
+        renderCategoryTabs();
+        renderGameSelectOptions();
+        checkUser();
+        fetchScripts();
+        fetchExecutors();
+    </script>
+
+    <!-- Fundo animado low-poly (efeito visual, não interfere na funcionalidade do site) -->
+    <script>
+        (function () {
+            const canvas = document.getElementById('bg-canvas');
+            if (!canvas || !canvas.getContext) return;
+            const ctx = canvas.getContext('2d');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            let width, height, points = [], triangles = [];
+            const gap = 130; // espaçamento maior = menos triângulos = mais leve
+
+            function resize() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+                initPoints();
+                if (reduceMotion) drawStatic();
+            }
+
+            function initPoints() {
+                points = [];
+                triangles = [];
+                const cols = Math.ceil(width / gap) + 2;
+                const rows = Math.ceil(height / gap) + 2;
+
+                for (let i = 0; i < cols; i++) {
+                    for (let j = 0; j < rows; j++) {
+                        points.push({
+                            x: i * gap - gap / 2 + (Math.random() - 0.5) * gap * 0.8,
+                            y: j * gap - gap / 2 + (Math.random() - 0.5) * gap * 0.8,
+                            baseX: i * gap - gap / 2,
+                            baseY: j * gap - gap / 2,
+                            vx: (Math.random() - 0.5) * 0.25,
+                            vy: (Math.random() - 0.5) * 0.25
+                        });
+                    }
+                }
+
+                for (let i = 0; i < cols - 1; i++) {
+                    for (let j = 0; j < rows - 1; j++) {
+                        const p1 = points[i * rows + j];
+                        const p2 = points[(i + 1) * rows + j];
+                        const p3 = points[i * rows + j + 1];
+                        const p4 = points[(i + 1) * rows + j + 1];
+                        if (Math.random() > 0.5) {
+                            triangles.push([p1, p2, p3]);
+                            triangles.push([p2, p4, p3]);
+                        } else {
+                            triangles.push([p1, p2, p4]);
+                            triangles.push([p1, p4, p3]);
+                        }
+                    }
                 }
             }
-        }
-    }
 
-    function paintTriangles(lx, ly) {
-        ctx.fillStyle = '#05070c';
-        ctx.fillRect(0, 0, width, height);
+            function paintTriangles(lx, ly) {
+                ctx.fillStyle = '#05070c';
+                ctx.fillRect(0, 0, width, height);
 
-        triangles.forEach(t => {
-            const cx = (t[0].x + t[1].x + t[2].x) / 3;
-            const cy = (t[0].y + t[1].y + t[2].y) / 3;
-            const dx = cx - lx, dy = cy - ly;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            const intensity = Math.max(0, 1 - dist / 560);
+                triangles.forEach(t => {
+                    const cx = (t[0].x + t[1].x + t[2].x) / 3;
+                    const cy = (t[0].y + t[1].y + t[2].y) / 3;
+                    const dx = cx - lx, dy = cy - ly;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    const intensity = Math.max(0, 1 - dist / 560);
 
-            const r = Math.floor(9 + intensity * 28);
-            const g = Math.floor(12 + intensity * 30);
-            const b = Math.floor(20 + intensity * 55);
+                    const r = Math.floor(9 + intensity * 28);
+                    const g = Math.floor(12 + intensity * 30);
+                    const b = Math.floor(20 + intensity * 55);
 
-            ctx.beginPath();
-            ctx.moveTo(t[0].x, t[0].y);
-            ctx.lineTo(t[1].x, t[1].y);
-            ctx.lineTo(t[2].x, t[2].y);
-            ctx.closePath();
-            ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
-            ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.25)`;
-            ctx.lineWidth = 1;
-            ctx.fill();
-            ctx.stroke();
-        });
-    }
-
-    function drawStatic() {
-        // Sem animação: desenha um único frame parado (respeita "reduzir movimento")
-        paintTriangles(width / 2, height / 2);
-    }
-
-    let time = 0;
-    let animating = true;
-    function draw() {
-        if (!animating) return;
-        time += 0.003;
-        const lx = width / 2 + Math.cos(time) * width * 0.4;
-        const ly = height / 2 + Math.sin(time * 0.7) * height * 0.4;
-
-        points.forEach(p => {
-            p.x += p.vx;
-            p.y += p.vy;
-            if (Math.abs(p.x - p.baseX) > gap * 0.6) p.vx *= -1;
-            if (Math.abs(p.y - p.baseY) > gap * 0.6) p.vy *= -1;
-        });
-
-        paintTriangles(lx, ly);
-        requestAnimationFrame(draw);
-    }
-
-    // Pausa a animação quando a aba não está visível (economiza CPU/bateria)
-    document.addEventListener('visibilitychange', () => {
-        animating = !document.hidden && !reduceMotion;
-        if (animating) requestAnimationFrame(draw);
-    });
-
-    window.addEventListener('resize', resize);
-    resize();
-    if (!reduceMotion) { animating = true; draw(); }
-})();
-
-// Rolagem horizontal das categorias com a roda do mouse (desktop)
-(function () {
-    const tabsEl = document.getElementById('categoryTabs');
-    if (tabsEl) {
-        tabsEl.addEventListener('wheel', function (e) {
-            if (e.deltaY !== 0) {
-                e.preventDefault();
-                tabsEl.scrollLeft += e.deltaY * 1.5;
+                    ctx.beginPath();
+                    ctx.moveTo(t[0].x, t[0].y);
+                    ctx.lineTo(t[1].x, t[1].y);
+                    ctx.lineTo(t[2].x, t[2].y);
+                    ctx.closePath();
+                    ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+                    ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.25)`;
+                    ctx.lineWidth = 1;
+                    ctx.fill();
+                    ctx.stroke();
+                });
             }
-        }, { passive: false });
-    }
-})();
-</script>
+
+            function drawStatic() {
+                // Sem animação: desenha um único frame parado (respeita "reduzir movimento")
+                paintTriangles(width / 2, height / 2);
+            }
+
+            let time = 0;
+            let animating = true;
+            function draw() {
+                if (!animating) return;
+                time += 0.003;
+                const lx = width / 2 + Math.cos(time) * width * 0.4;
+                const ly = height / 2 + Math.sin(time * 0.7) * height * 0.4;
+
+                points.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (Math.abs(p.x - p.baseX) > gap * 0.6) p.vx *= -1;
+                    if (Math.abs(p.y - p.baseY) > gap * 0.6) p.vy *= -1;
+                });
+
+                paintTriangles(lx, ly);
+                requestAnimationFrame(draw);
+            }
+
+            // Pausa a animação quando a aba não está visível (economiza CPU/bateria)
+            document.addEventListener('visibilitychange', () => {
+                animating = !document.hidden && !reduceMotion;
+                if (animating) requestAnimationFrame(draw);
+            });
+
+            window.addEventListener('resize', resize);
+            resize();
+            if (!reduceMotion) {animating = true; draw();}
+        })();
+
+        // Rolagem horizontal das categorias com a roda do mouse (desktop)
+        (function () {
+            const tabsEl = document.getElementById('categoryTabs');
+            if (tabsEl) {
+                tabsEl.addEventListener('wheel', function (e) {
+                    if (e.deltaY !== 0) {
+                        e.preventDefault();
+                        tabsEl.scrollLeft += e.deltaY * 1.5;
+                    }
+                }, {passive: false});
+            }
+        })();
+    </script>
 </body>
+
 </html>
